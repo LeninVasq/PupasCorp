@@ -1,0 +1,279 @@
+﻿@using PupasCorp.Models.ViewModels
+@model Autentificacion
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          background-color: #f5f5f5;
+          padding: 1rem;
+        }
+
+        .login-card {
+          width: 100%;
+          max-width: 400px;
+          background-color: white;
+          border-radius: 10px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+        }
+
+        .login-header {
+          padding: 1.5rem;
+          text-align: center;
+        }
+
+        .login-title {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #333;
+          margin-bottom: 0.5rem;
+        }
+
+        .login-description {
+          color: #666;
+          font-size: 0.875rem;
+        }
+
+        .login-content {
+          padding: 0 1.5rem 1.5rem;
+        }
+
+        .form-group {
+          margin-bottom: 1rem;
+        }
+
+        .form-label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+          color: #333;
+          font-size: 0.875rem;
+        }
+
+        .form-input-wrapper {
+          position: relative;
+        }
+
+        .form-input {
+          width: 100%;
+          padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 0.875rem;
+          transition: border-color 0.2s;
+        }
+
+        .form-input:focus {
+          outline: none;
+          border-color: #4f46e5;
+          box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+        }
+
+        .input-icon {
+          position: absolute;
+          left: 0.75rem;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #9ca3af;
+          width: 1rem;
+          height: 1rem;
+        }
+
+        .password-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 0.5rem;
+        }
+
+        .forgot-password {
+          font-size: 0.75rem;
+          color: #4f46e5;
+          text-decoration: none;
+        }
+
+        .forgot-password:hover {
+          text-decoration: underline;
+        }
+
+        .remember-me {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+        }
+
+        .remember-checkbox {
+          margin-right: 0.5rem;
+        }
+
+        .remember-label {
+          font-size: 0.875rem;
+          color: #333;
+        }
+
+        .login-button {
+          width: 100%;
+          padding: 0.75rem;
+          background-color: #4f46e5;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: background-color 0.2s;
+        }
+
+        .login-button:hover {
+          background-color: #4338ca;
+        }
+
+        .login-footer {
+          padding: 1.5rem;
+          border-top: 1px solid #eee;
+        }
+
+        .divider {
+          position: relative;
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+
+        .divider::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background-color: #eee;
+        }
+
+        .divider-text {
+          position: relative;
+          display: inline-block;
+          padding: 0 0.5rem;
+          background-color: white;
+          color: #9ca3af;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+        }
+
+        .social-buttons {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0.75rem;
+          margin-bottom: 1rem;
+        }
+
+        .social-button {
+          padding: 0.75rem;
+          background-color: white;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: background-color 0.2s;
+        }
+
+        .social-button:hover {
+          background-color: #f9fafb;
+        }
+
+        .signup-text {
+          text-align: center;
+          font-size: 0.875rem;
+          color: #666;
+        }
+
+        .signup-link {
+          color: #4f46e5;
+          text-decoration: none;
+          font-weight: 500;
+        }
+
+        .signup-link:hover {
+          text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="login-header">
+            <h1 class="login-title">Login</h1>
+            <p class="login-description">Enter your email and password to access your account</p>
+        </div>
+        <div class="login-content">
+            <form asp-action="Login">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <div class="form-input-wrapper">
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <input asp-for="Correo"  type="email" id="email" class="form-input" placeholder="name@example.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="password-header">
+                        <label for="password" class="form-label">Password</label>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <div class="form-input-wrapper">
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <input asp-for="Contrasenia" type="password" id="password" class="form-input" required>
+                    </div>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" class="remember-checkbox">
+                    <label for="remember" class="remember-label">Remember me</label>
+                </div>
+                <button type="submit" class="login-button">Sign in</button>
+            </form>
+        </div>
+        <div class="login-footer">
+            <div class="divider">
+                <span class="divider-text">Or continue with</span>
+            </div>
+            <div class="social-buttons">
+                <button class="social-button">Google</button>
+                <button class="social-button">GitHub</button>
+            </div>
+            <p class="signup-text">
+                Don't have an account? <a  asp-controller="Autentificacion" asp-action="Registro" class="signup-link">Sign up</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- recibo el error -->
+@if (TempData["Mensaje"] != null)
+{
+    <script>
+        alert('@TempData["Mensaje"]');
+    </script>
+}

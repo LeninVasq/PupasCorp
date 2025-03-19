@@ -1,7 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using PupasCorp.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+
+builder.Services.AddDbContext<PupascorpContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PupasCorp_Context"));
+});
+
 
 var app = builder.Build();
 
@@ -22,6 +33,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Autentificacion}/{action=Login}/{id?}");
+
 
 app.Run();
