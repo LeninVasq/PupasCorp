@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using PupasCorp.Models.ViewModels;
 
 namespace PupasCorp.Models;
 
@@ -14,6 +15,14 @@ public partial class PupascorpContext : DbContext
         : base(options)
     {
     }
+
+
+    //lo agrege yo para que funcione el procedimiento de logins por que si no no lo encuentra
+    public DbSet<Login> Login { get; set; }
+    public DbSet<Tokens> Tokens { get; set; }
+
+
+
 
     public virtual DbSet<CategoriasIngrediente> CategoriasIngredientes { get; set; }
 
@@ -58,6 +67,12 @@ public partial class PupascorpContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        //para indicar que no tiene una entidad clave
+        modelBuilder.Entity<Login>().HasNoKey();
+        modelBuilder.Entity<Tokens>().HasNoKey();
+
+
+
         modelBuilder.Entity<CategoriasIngrediente>(entity =>
         {
             entity.HasKey(e => e.IdCategoriasIngredientes).HasName("PK__Categori__32EC87ED5D269CC5");

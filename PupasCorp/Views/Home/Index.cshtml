@@ -6,3 +6,11 @@
     <h1 class="display-4">Bienvenido</h1>
     <p>Hola .</p>
 </div>
+
+@if (TempData["Login"] != null)
+{
+    <script>
+        var mensaje = "@Html.Raw(TempData["Login"])";
+        alert(mensaje);
+    </script>
+}

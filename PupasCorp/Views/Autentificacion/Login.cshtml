@@ -1,5 +1,6 @@
 ﻿@using PupasCorp.Models.ViewModels
 @model Autentificacion
+
 @{
     Layout = null;
 }
@@ -274,6 +275,7 @@
 @if (TempData["Mensaje"] != null)
 {
     <script>
-        alert('@TempData["Mensaje"]');
+        var mensaje = "@Html.Raw(TempData["Mensaje"])";
+        alert(mensaje);
     </script>
 }

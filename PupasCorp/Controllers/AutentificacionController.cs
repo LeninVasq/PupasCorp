@@ -1,7 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using PupasCorp.Models;
 using PupasCorp.Models.ViewModels;
+using PupasCorp.Otros;
+using System.Data;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PupasCorp.Controllers
@@ -23,7 +27,7 @@ namespace PupasCorp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(Autentificacion auth)
+        public async Task<IActionResult> Login(Autentificacion auth)
         {
             if (auth == null || string.IsNullOrEmpty(auth.Correo) || string.IsNullOrEmpty(auth.Contrasenia))
             {
@@ -31,20 +35,40 @@ namespace PupasCorp.Controllers
                 return View();
             }
 
-            // Verifica si el correo y la contraseña existen
-            var usuario = _context.Usuarios
-                .FirstOrDefault(u => u.Correo == auth.Correo && u.Contrasenia == auth.Contrasenia);
+            var fusion = auth.Correo + auth.Contrasenia;
 
-            if (usuario == null)
+            var resultado = await _context.Set<Login>()
+                .FromSqlRaw("EXEC Logins @Correo, @Contrasenia",
+                    new SqlParameter("@Correo", auth.Correo),
+                    new SqlParameter("@Contrasenia", auth.Contrasenia))
+                .ToListAsync();
+
+            if (resultado.FirstOrDefault()?.IdUsuario != 0)
             {
-                
-                TempData["Mensaje"] = "Correo o contraseña incorrectos.";
+                encriptacion encrip = new encriptacion(); // instancio la clase de encriptacion para poder usar los metodos
+                var Id = resultado.FirstOrDefault()?.IdUsuario;
+                string encrypted = encrip.Encrypt(fusion);
+
+                var mensaje = "Creacion de token";
+                var token = await _context.Set<Tokens>()
+                    .FromSqlRaw("EXEC Token @Token,@Mensaje ,@Id",
+                        new SqlParameter("@Token", encrypted),
+                        new SqlParameter("@Mensaje", mensaje),
+                        new SqlParameter("@Id", Id))
+                    .ToListAsync();
+
+                TempData["Login"] = token.FirstOrDefault()?.Token;
+                return RedirectToAction("Index", "Home");
+
+            }
+            else
+            {
+
+                TempData["Mensaje"] = "Correo o contraseña incorrectos";
                 return RedirectToAction("Login");
             }
-
-            // Si el usuario existe, redirige a la página principal
-            return RedirectToAction("Privacy", "Home");
         }
+
 
 
         public IActionResult Registro()
