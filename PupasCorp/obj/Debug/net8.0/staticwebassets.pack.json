@@ -5,6 +5,26 @@
       "PackagePath": "staticwebassets\\PupasCorp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\wwwroot\\css\\CardsCategoriasIngredientes.css",
+      "PackagePath": "staticwebassets\\css\\CardsCategoriasIngredientes.css"
+    },
+    {
+      "Id": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\wwwroot\\css\\Formulario.css",
+      "PackagePath": "staticwebassets\\css\\Formulario.css"
+    },
+    {
+      "Id": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\wwwroot\\css\\StyleModal.css",
+      "PackagePath": "staticwebassets\\css\\StyleModal.css"
+    },
+    {
+      "Id": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\wwwroot\\css\\Styletable.css",
+      "PackagePath": "staticwebassets\\css\\Styletable.css"
+    },
+    {
+      "Id": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\wwwroot\\css\\btn_add.css",
+      "PackagePath": "staticwebassets\\css\\btn_add.css"
+    },
+    {
       "Id": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

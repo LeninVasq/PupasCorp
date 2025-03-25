@@ -1,0 +1,141 @@
+﻿@using PupasCorp.Models.ViewModels
+@model CategoriaIngredientes
+
+
+<div class="containerCategoriasIngredientes">
+
+    <div class="ContainerBtnTitle">
+        <h1 class="page-title">Categorías de Productos</h1>
+
+        <button id="openModalBtn" class="btn-add">
+            <span class="btn-icon">+</span>
+            <span class="btn-text">Agregar</span>
+        </button>
+    </div>
+
+
+    <div class="category-grid">
+        <div class="category-card">
+            <div class="card-header">
+                <div class="card-title-row">
+                    <h3 class="card-title">Electrónicos</h3>
+                    <span class="product-count">42</span>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/450x70"
+                         alt="Electrónicos"
+                         class="category-image" />
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="button-container">
+                    <button class="btn btn-primary">
+                        Productos
+                    </button>
+                    <button class="btn btn-secondary">
+                        Actualizar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="empty-state-section">
+        <div class="empty-state">
+            <p class="empty-message">No hay categorías disponibles</p>
+        </div>
+    </div>
+</div>
+
+
+<!--Modal-->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModalBtn">&times;</span>
+
+        <form asp-action="Create">
+            <div class="form-group">
+                <label class="image-upload" for="product-image">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <div class="image-upload-text">
+                        <strong>Haga clic para subir</strong> o arrastre una imagen aquí
+                    </div>
+                    <input asp-for="Foto" type="file" id="product-image" class="file-input" accept="image/*" onchange="previewImage(event)">
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" asp-for="Nombre" id="nombre" name="nombre" placeholder="Nombre del producto" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" asp-for="Descripcion" name="descripcion" placeholder="Describe el producto..." class="form-control"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btns btns-secondary">Cerrar</button>
+                <button type="submit" class="btns btns-primary">Guardar cambios</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+</div>
+
+<!--Script modal-->
+
+<script>
+    var modal = document.getElementById("productModal");
+    var closeModalBtn = document.getElementById("closeModalBtn");
+    var openModalBtn = document.getElementById("openModalBtn");
+
+    // When the user clicks on the button, open the modal
+    openModalBtn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    closeModalBtn.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+<!--Script para mostrar la img-->
+
+<script>
+    function previewImage(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const uploadText = document.querySelector('.image-upload-text');
+                uploadText.innerHTML = `
+                <img src="${e.target.result}" alt="Vista previa" 
+                style="max-width: 50%; max-height: 25%; margin-top: 10px;
+                border: 1px solid #ccc; padding: 5px;">`;
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+
+
+@if (TempData["Mensaje"] != null)
+{
+    <script>
+        var mensaje = "@Html.Raw(TempData["Mensaje"])";
+        alert(mensaje);
+    </script>
+}

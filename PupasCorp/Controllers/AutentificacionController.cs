@@ -15,6 +15,7 @@ namespace PupasCorp.Controllers
 
         private readonly PupascorpContext _context;
 
+
         public AutentificacionController(PupascorpContext context)
         {
             _context = context;
@@ -45,9 +46,14 @@ namespace PupasCorp.Controllers
 
             if (resultado.FirstOrDefault()?.IdUsuario != 0)
             {
+
+
                 encriptacion encrip = new encriptacion(); // instancio la clase de encriptacion para poder usar los metodos
                 var Id = resultado.FirstOrDefault()?.IdUsuario;
                 string encrypted = encrip.Encrypt(fusion);
+
+                HttpContext.Session.SetString("Id", Id.ToString());
+
 
                 var mensaje = "Creacion de token";
                 var token = await _context.Set<Tokens>()
@@ -69,7 +75,22 @@ namespace PupasCorp.Controllers
             }
         }
 
+         public async Task<IActionResult> logout()
+        {
 
+            var Id = int.Parse(HttpContext.Session.GetString("Id"));
+                var mensaje = "Eliminacion";
+                var token = await _context.Set<Tokens>()
+                    .FromSqlRaw("EXEC Token @Token,@Mensaje ,@Id",
+                        new SqlParameter("@Token", "Null"),
+                        new SqlParameter("@Mensaje", mensaje),
+                        new SqlParameter("@Id", Id))
+                    .ToListAsync();
+
+                TempData["Logout"] = token.FirstOrDefault()?.Token;
+                return RedirectToAction("Login");
+
+        }
 
         public IActionResult Registro()
         {

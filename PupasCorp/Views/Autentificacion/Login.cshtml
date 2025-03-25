@@ -279,3 +279,11 @@
         alert(mensaje);
     </script>
 }
+
+@if (TempData["Logout"] != null)
+{
+    <script>
+        var mensaje = "@Html.Raw(TempData["Logout"])";
+        alert(mensaje);
+    </script>
+}
