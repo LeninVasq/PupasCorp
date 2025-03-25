@@ -1,1 +1,46 @@
+## Ignorar archivos de compilación y dependencias
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.csproj.user
+*.csproj.vspscc
+*.csproj.Transformation
+
+## Ignorar configuraciones específicas de Visual Studio
+.vscode/
+*.vs
+*.vscode
+*.sln.ide
+
+## Ignorar paquetes de NuGet
+packages/
+*.nupkg
+project.lock.json
+
+## Ignorar archivos generados
+wwwroot/
+appsettings.Development.json
+node_modules/
+
+## Ignorar archivos de logs y temporalidades
+*.log
+*.tlog
+
+## Ignorar archivos de publicación
+.publish/
+*.publish.xml
+
+## Ignorar archivos de usuario
+*.pidb
+*.dotCover
+
+# Ignorar dependencias locales
+.DS_Store
+Thumbs.db
+
+## Ignorar archivos específicos de Visual Studio
 .vs/
+.vs/*.suo
+.vs/*DocumentLayout*.json
