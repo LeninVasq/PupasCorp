@@ -56,7 +56,7 @@
     <div class="modal-content">
         <span class="close" id="closeModalBtn">&times;</span>
 
-        <form asp-action="Create">
+            <form enctype="multipart/form-data" asp-action="Create">
             <div class="form-group">
                 <label class="image-upload" for="product-image">
                     <i class="fas fa-cloud-upload-alt"></i>
@@ -94,17 +94,14 @@
     var closeModalBtn = document.getElementById("closeModalBtn");
     var openModalBtn = document.getElementById("openModalBtn");
 
-    // When the user clicks on the button, open the modal
     openModalBtn.onclick = function () {
         modal.style.display = "block";
     }
 
-    // When the user clicks on <span> (x), close the modal
     closeModalBtn.onclick = function () {
         modal.style.display = "none";
     }
 
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";

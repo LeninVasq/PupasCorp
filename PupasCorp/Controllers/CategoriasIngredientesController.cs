@@ -27,17 +27,37 @@ namespace PupasCorp.Controllers
             if (ModelState.IsValid)
             {
                 //Base64 B64 = new Base64();
-                var categoria_ingredientes = new CategoriasIngrediente()
+                if (model.Foto != null && model.Foto.Length > 0)
                 {
-                    Nombre = model.Nombre,
-                    Foto = "Foto.jpg",
-                    Descripcion = model.Descripcion,
-                    Estado = true                    
-                };
-                _context.Add(categoria_ingredientes);
-                await _context.SaveChangesAsync();
+                    using (var ms = new MemoryStream())
+                    {
+                        
+                        model.Foto.CopyTo(ms);
+                        byte[] imageBytes = ms.ToArray();
+                        string base64String = Convert.ToBase64String(imageBytes);
+
+                        var categoria_ingredientes = new CategoriasIngrediente()
+                        {
+                        Nombre = model.Nombre,
+                        Foto = base64String,
+                        Descripcion = model.Descripcion,
+                        Estado = true                    
+                        };
+                        _context.Add(categoria_ingredientes);
+                        await _context.SaveChangesAsync();
+                        TempData["Mensaje"] = "Se ha resgistrado exitasamente la categoria";
+                        return RedirectToAction("Index");
+                    }
+                }
+                else
+                {
+                    TempData["Mensaje"] = "Seleccione una imagen";
+                    return RedirectToAction("Index");
+
+                }
                 
-                //string base64 = B64.ConvertImageToBase64(model.Foto);
+
+                //string base64 = model.Foto;
                 //TempData["Mensaje"] = string.Join(" | ", base64);
                 return RedirectToAction("Index");
             }

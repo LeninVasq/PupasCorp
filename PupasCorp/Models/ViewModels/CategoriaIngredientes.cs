@@ -6,6 +6,6 @@
 
         public string? Descripcion { get; set; }
 
-        public string? Foto { get; set; }
+        public IFormFile? Foto { get; set; }
     }
 }
