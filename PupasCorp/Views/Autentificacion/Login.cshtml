@@ -13,207 +13,221 @@
     <title>Login Form</title>
     <style>
         * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          min-height: 100vh;
-          background-color: #f5f5f5;
-          padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('https://images.squarespace-cdn.com/content/v1/613e207ecbe42f2db3334200/2c57ce14-3970-4c12-b443-7a075831f3e7/_MG_1399.JPG?format=1500w');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 1rem;
         }
 
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.3); /* Capa de color negro con opacidad */
+                z-index: -1; /* Asegura que la capa esté detrás del contenido */
+            }
+
         .login-card {
-          width: 100%;
-          max-width: 400px;
-          background-color: white;
-          border-radius: 10px;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-          overflow: hidden;
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
         .login-header {
-          padding: 1.5rem;
-          text-align: center;
+            padding: 1.5rem;
+            text-align: center;
         }
 
         .login-title {
-          font-size: 1.5rem;
-          font-weight: 700;
-          color: #333;
-          margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5rem;
         }
 
         .login-description {
-          color: #666;
-          font-size: 0.875rem;
+            color: #666;
+            font-size: 0.875rem;
         }
 
         .login-content {
-          padding: 0 1.5rem 1.5rem;
+            padding: 0 1.5rem 1.5rem;
         }
 
         .form-group {
-          margin-bottom: 1rem;
+            margin-bottom: 1rem;
         }
 
         .form-label {
-          display: block;
-          margin-bottom: 0.5rem;
-          font-weight: 500;
-          color: #333;
-          font-size: 0.875rem;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+            font-size: 0.875rem;
         }
 
         .form-input-wrapper {
-          position: relative;
+            position: relative;
         }
 
         .form-input {
-          width: 100%;
-          padding: 0.75rem 0.75rem 0.75rem 2.5rem;
-          border: 1px solid #ddd;
-          border-radius: 5px;
-          font-size: 0.875rem;
-          transition: border-color 0.2s;
+            width: 100%;
+            padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.875rem;
+            transition: border-color 0.2s;
         }
 
-        .form-input:focus {
-          outline: none;
-          border-color: #4f46e5;
-          box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
-        }
+            .form-input:focus {
+                outline: none;
+                border-color: #4f46e5;
+                box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+            }
 
         .input-icon {
-          position: absolute;
-          left: 0.75rem;
-          top: 50%;
-          transform: translateY(-50%);
-          color: #9ca3af;
-          width: 1rem;
-          height: 1rem;
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+            width: 1rem;
+            height: 1rem;
         }
 
         .password-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
         }
 
         .forgot-password {
-          font-size: 0.75rem;
-          color: #4f46e5;
-          text-decoration: none;
+            font-size: 0.75rem;
+            color: #4f46e5;
+            text-decoration: none;
         }
 
-        .forgot-password:hover {
-          text-decoration: underline;
-        }
+            .forgot-password:hover {
+                text-decoration: underline;
+            }
 
         .remember-me {
-          display: flex;
-          align-items: center;
-          margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
         }
 
         .remember-checkbox {
-          margin-right: 0.5rem;
+            margin-right: 0.5rem;
         }
 
         .remember-label {
-          font-size: 0.875rem;
-          color: #333;
+            font-size: 0.875rem;
+            color: #333;
         }
 
         .login-button {
-          width: 100%;
-          padding: 0.75rem;
-          background-color: #4f46e5;
-          color: white;
-          border: none;
-          border-radius: 5px;
-          font-weight: 500;
-          cursor: pointer;
-          transition: background-color 0.2s;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
         }
 
-        .login-button:hover {
-          background-color: #4338ca;
-        }
+            .login-button:hover {
+                background-color: #4338ca;
+            }
 
         .login-footer {
-          padding: 1.5rem;
-          border-top: 1px solid #eee;
+            padding: 1.5rem;
+            border-top: 1px solid #eee;
         }
 
         .divider {
-          position: relative;
-          text-align: center;
-          margin-bottom: 1rem;
+            position: relative;
+            text-align: center;
+            margin-bottom: 1rem;
         }
 
-        .divider::before {
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: 0;
-          right: 0;
-          height: 1px;
-          background-color: #eee;
-        }
+            .divider::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background-color: #eee;
+            }
 
         .divider-text {
-          position: relative;
-          display: inline-block;
-          padding: 0 0.5rem;
-          background-color: white;
-          color: #9ca3af;
-          font-size: 0.75rem;
-          text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            padding: 0 0.5rem;
+            background-color: white;
+            color: #9ca3af;
+            font-size: 0.75rem;
+            text-transform: uppercase;
         }
 
         .social-buttons {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 0.75rem;
-          margin-bottom: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
         }
 
         .social-button {
-          padding: 0.75rem;
-          background-color: white;
-          border: 1px solid #ddd;
-          border-radius: 5px;
-          font-weight: 500;
-          cursor: pointer;
-          transition: background-color 0.2s;
+            padding: 0.75rem;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
         }
 
-        .social-button:hover {
-          background-color: #f9fafb;
-        }
+            .social-button:hover {
+                background-color: #f9fafb;
+            }
 
         .signup-text {
-          text-align: center;
-          font-size: 0.875rem;
-          color: #666;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #666;
         }
 
         .signup-link {
-          color: #4f46e5;
-          text-decoration: none;
-          font-weight: 500;
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 500;
         }
 
-        .signup-link:hover {
-          text-decoration: underline;
-        }
+            .signup-link:hover {
+                text-decoration: underline;
+            }
     </style>
 </head>
 <body>
@@ -231,7 +245,7 @@
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        <input asp-for="Correo"  type="email" id="email" class="form-input" placeholder="name@example.com" required>
+                        <input asp-for="Correo" type="email" id="email" class="form-input" placeholder="name@example.com" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -263,7 +277,7 @@
                 <button class="social-button">GitHub</button>
             </div>
             <p class="signup-text">
-                Don't have an account? <a  asp-controller="Autentificacion" asp-action="Registro" class="signup-link">Sign up</a>
+                Don't have an account? <a asp-controller="Autentificacion" asp-action="Registro" class="signup-link">Sign up</a>
             </p>
         </div>
     </div>
@@ -273,6 +287,7 @@
 
 <!-- recibo el error -->
 @if (TempData["Mensaje"] != null)
+
 {
     <script>
         var mensaje = "@Html.Raw(TempData["Mensaje"])";
@@ -281,6 +296,7 @@
 }
 
 @if (TempData["Logout"] != null)
+
 {
     <script>
         var mensaje = "@Html.Raw(TempData["Logout"])";

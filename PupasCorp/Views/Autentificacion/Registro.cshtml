@@ -131,8 +131,9 @@
                 <input type="password" asp-for="Contrasenia" id="password" placeholder="****" required>
             </div>
             <button type="submit">Registrarse</button>
+
         </form>
-        <p class="signup">¿Ya tienes cuenta? <a href="#">Inicia sesión</a></p>
+        <p class="signup">¿Ya tienes cuenta? <a asp-controller="Autentificacion" asp-action="Login" class="signup-link">Iniciar sesión</a></p>
     </div>
 
     
