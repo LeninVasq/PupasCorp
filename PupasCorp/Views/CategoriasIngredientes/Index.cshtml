@@ -1,5 +1,10 @@
-﻿@using PupasCorp.Models.ViewModels
-@model CategoriaIngredientes
+﻿@model List<CategoriasIngrediente>
+@using PupasCorp.Models.ViewModels
+
+
+@await Html.PartialAsync("Actualizar", new CategoriaIngre())
+
+@await Html.PartialAsync("ProductModal", new CategoriaIngre())
 
 
 <div class="containerCategoriasIngredientes">
@@ -13,120 +18,143 @@
         </button>
     </div>
 
-
     <div class="category-grid">
-        <div class="category-card">
-            <div class="card-header">
-                <div class="card-title-row">
-                    <h3 class="card-title">Electrónicos</h3>
-                    <span class="product-count">42</span>
-                </div>
-            </div>
-            <div class="card-content">
-                <div class="image-container">
-                    <img src="https://via.placeholder.com/450x70"
-                         alt="Electrónicos"
-                         class="category-image" />
-                </div>
-            </div>
-            <div class="card-footer">
-                <div class="button-container">
-                    <button class="btn btn-primary">
-                        Productos
-                    </button>
-                    <button class="btn btn-secondary">
-                        Actualizar
-                    </button>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="empty-state-section">
-        <div class="empty-state">
-            <p class="empty-message">No hay categorías disponibles</p>
-        </div>
-    </div>
-</div>
-
-
-<!--Modal-->
-<div id="productModal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="closeModalBtn">&times;</span>
-
-            <form enctype="multipart/form-data" asp-action="Create">
-            <div class="form-group">
-                <label class="image-upload" for="product-image">
-                    <i class="fas fa-cloud-upload-alt"></i>
-                    <div class="image-upload-text">
-                        <strong>Haga clic para subir</strong> o arrastre una imagen aquí
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var categoriasIngrediente in Model)
+            {
+                <div class="category-card">
+                    <div class="card-header">
+                        <div class="card-title-row">
+                            <h3 class="card-title">@Html.DisplayFor(m => categoriasIngrediente.Nombre)</h3>
+                            <span class="product-count">@Html.DisplayFor(m => categoriasIngrediente.IdCategoriasIngredientes)</span>
+                        </div>
                     </div>
-                    <input asp-for="Foto" type="file" id="product-image" class="file-input" accept="image/*" onchange="previewImage(event)">
-                </label>
-            </div>
+                    <div class="card-content">
+                        <div class="image-container">
+                            <img src="data:image/png;base64,@categoriasIngrediente.Foto"
+                                 alt="Electrónicos"
+                                 class="category-image" />
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="button-container">
+                            <button class="btn btn-primary">
+                                Productos
+                            </button>
+                            <button class="btn btn-secondary openModalBtnActu"
+                            data-id="@categoriasIngrediente.IdCategoriasIngredientes"
+                            data-nombre="@categoriasIngrediente.Nombre"
+                            data-foto="@categoriasIngrediente.Foto"
+                                    data-descrip="@categoriasIngrediente.Descripcion">
+                            Actualizar
+                            </button>
 
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" asp-for="Nombre" id="nombre" name="nombre" placeholder="Nombre del producto" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="empty-state-section">
+                <div class="empty-state">
+                    <p class="empty-message">No hay categorías disponibles</p>
+                </div>
             </div>
-
-            <div class="form-group">
-                <label for="descripcion">Descripción</label>
-                <textarea id="descripcion" asp-for="Descripcion" name="descripcion" placeholder="Describe el producto..." class="form-control"></textarea>
-            </div>
-
-            <div class="form-actions">
-                <button type="submit" class="btns btns-secondary">Cerrar</button>
-                <button type="submit" class="btns btns-primary">Guardar cambios</button>
-            </div>
-        </form>
-
+        }
     </div>
 </div>
-</div>
+
+
 
 <!--Script modal-->
 
 <script>
-    var modal = document.getElementById("productModal");
-    var closeModalBtn = document.getElementById("closeModalBtn");
-    var openModalBtn = document.getElementById("openModalBtn");
+    document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("Actualizar");
+        var closeModalBtn = document.getElementById("closeModalActualizar");
+        var openModalBtns = document.querySelectorAll(".openModalBtnActu"); // Selecciona todos los botones "Actualizar"
+        var inputId = document.getElementById("categoriaId");
+        var closeModalBtnActualizar = document.getElementById("closeModalBtnActualizar");
 
-    openModalBtn.onclick = function () {
-        modal.style.display = "block";
-    }
+            var inputNombre = document.getElementById("Nombre");
+            var inputFoto = document.getElementById("fotoBase64");
+            var inputDesc = document.getElementById("descripcion");
 
-    closeModalBtn.onclick = function () {
-        modal.style.display = "none";
-    }
+            openModalBtns.forEach(function (btn) {
+                btn.onclick = function () {
+                var categoriaId = btn.getAttribute("data-id"); 
+                var CategoriaNombre = btn.getAttribute("data-nombre");
+                var CategoriaFoto = btn.getAttribute("data-foto");
+                var CategoriaDescrip = btn.getAttribute("data-descrip");
+                if (inputId) {
+                    inputId.value = categoriaId;
+                    }
+                if(inputNombre)inputNombre.value = CategoriaNombre;
+                     if(inputFoto)inputFoto.value = CategoriaFoto;
+     if(inputFoto)inputDesc.value = CategoriaDescrip;
 
-    window.onclick = function (event) {
+                modal.style.display = "block"; // Muestra el modal
+            };
+            });
+
+    if (closeModalBtnActualizar) {
+        closeModalBtnActualizar.addEventListener("click", function (event) {
+                event.preventDefault(); 
+                modal.style.display = "none";
+            });
+        }
+        closeModalBtn.onclick = function () {
+                modal.style.display = "none";
+            };
+
+            window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
+            }
+            };
+        });
+</script>
+
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("productModal");
+        var closeModalBtn = document.getElementById("closeModalProduct");
+        var closeModalBtnProduct = document.getElementById("closeModalBtnProduct");
+        var openModalBtn = document.getElementById("openModalBtn"); 
+
+        if (openModalBtn) {
+            openModalBtn.onclick = function () {
+                modal.style.display = "block";
+            };
         }
+
+         if (closeModalBtn) {
+        closeModalBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
     }
+
+        if (closeModalBtnProduct) {
+        closeModalBtnProduct.addEventListener("click", function (event) {
+            event.preventDefault(); // Evita cualquier comportamiento inesperado del botón
+            modal.style.display = "none";
+        });
+    }
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    });
+
 </script>
 
 <!--Script para mostrar la img-->
 
-<script>
-    function previewImage(event) {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                const uploadText = document.querySelector('.image-upload-text');
-                uploadText.innerHTML = `
-                <img src="${e.target.result}" alt="Vista previa" 
-                style="max-width: 50%; max-height: 25%; margin-top: 10px;
-                border: 1px solid #ccc; padding: 5px;">`;
-            };
-            reader.readAsDataURL(file);
-        }
-    }
-</script>
+
 
 
 @if (TempData["Mensaje"] != null)

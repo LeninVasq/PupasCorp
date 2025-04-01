@@ -14,15 +14,28 @@ namespace PupasCorp.Controllers
         public CategoriasIngredientesController(PupascorpContext context)
         {
             _context = context;
+            
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
+        => View(await _context.CategoriasIngredientes.ToListAsync());
+
+        
+       public IActionResult ProductModal()
+       {
+            var categoriaIngre = new CategoriaIngre();
+            return View(categoriaIngre);
+       }
+
+        public IActionResult actualizar(int id)
         {
-            return View();
+            return View(id);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create(CategoriaIngredientes model)
+
+
+    [HttpPost]
+        public async Task<IActionResult> Create(CategoriaIngre model)
         {
             if (ModelState.IsValid)
             {
@@ -51,15 +64,9 @@ namespace PupasCorp.Controllers
                 }
                 else
                 {
-                    TempData["Mensaje"] = "Seleccione una imagen";
                     return RedirectToAction("Index");
 
                 }
-                
-
-                //string base64 = model.Foto;
-                //TempData["Mensaje"] = string.Join(" | ", base64);
-                return RedirectToAction("Index");
             }
 
            
@@ -68,7 +75,8 @@ namespace PupasCorp.Controllers
             .Select(e => e.ErrorMessage)
             .ToList();
             //sirve para enviar un mensaje a vista
-            TempData["Mensaje"] = string.Join(" | ", errors);
+            //TempData["Mensaje"] = string.Join(" | ", errors);
+            TempData["Mensaje"] = "HOLA";
 
             return View(model);
         }

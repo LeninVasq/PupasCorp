@@ -1,7 +1,8 @@
 ﻿namespace PupasCorp.Models.ViewModels
 {
-    public class CategoriaIngredientes
+    public class CategoriaIngre
     {
+
         public string? Nombre { get; set; }
 
         public string? Descripcion { get; set; }

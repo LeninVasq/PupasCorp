@@ -1,0 +1,63 @@
+﻿@using PupasCorp.Models.ViewModels
+@model CategoriaIngre
+
+<!--Modal-->
+<div id="Actualizar" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModalActualizar">&times;</span>
+
+        <form enctype="multipart/form-data" asp-action="Create">
+            <div class="form-group">
+                <label class="image-upload" for="Fotos">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <div class="image-upload-text actualizar-preview">
+                        <strong>Haga clic para subir</strong> o arrastre una imagen aquí
+                    </div>
+                    <input asp-for="Foto" type="file" id="Fotos" class="file-input" accept="image/*"
+                           onchange="Image(event, 'actualizar-preview')">
+                </label>
+            </div>
+
+            <input type="hidden" id="fotoBase64" name="FotoBase64" />
+
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" asp-for="Nombre" id="Nombre" name="nombre" placeholder="Nombre del producto" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" asp-for="Descripcion" name="descripcion" placeholder="Describe el producto..." class="form-control"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" id="closeModalBtnActualizar" class="btns btns-secondary">Cerrar</button>
+                <button type="submit" class="btns btns-primary">Guardar cambios</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script>
+    function Image(event, previewClass) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                // Seleccionar la vista previa correcta según el modal
+                const uploadText = document.querySelector(`.${previewClass}`);
+
+                if (uploadText) {
+                    uploadText.innerHTML = `
+                            <img src="${e.target.result}" alt="Vista previa"
+                            style="max-width: 50%; max-height: 25%; margin-top: 10px;
+                            border: 1px solid #ccc; padding: 5px;">`;
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+
