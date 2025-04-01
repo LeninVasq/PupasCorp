@@ -39,9 +39,14 @@
                     </div>
                     <div class="card-footer">
                         <div class="button-container">
-                            <button class="btn btn-primary">
-                                Productos
-                            </button>
+                            
+                <form asp-controller="Ingredientes" asp-action="Index" method="post">
+                    <input type="hidden" name="id" value="@categoriasIngrediente.IdCategoriasIngredientes" />
+                    <button type="submit" class="btn btn-primary">Producto</button>
+                </form>
+
+
+
                             <button class="btn btn-secondary openModalBtnActu"
                             data-id="@categoriasIngrediente.IdCategoriasIngredientes"
                             data-nombre="@categoriasIngrediente.Nombre"

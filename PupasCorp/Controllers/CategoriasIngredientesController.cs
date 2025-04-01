@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using PupasCorp.Models;
 using PupasCorp.Models.ViewModels;
 using PupasCorp.Otros;
@@ -81,4 +82,6 @@ namespace PupasCorp.Controllers
             return View(model);
         }
     }
+
+    
 }

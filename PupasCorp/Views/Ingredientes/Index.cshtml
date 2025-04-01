@@ -1,0 +1,63 @@
+﻿@model List<Ingrediente>
+
+
+
+
+<div class="containerCategoriasIngredientes">
+
+    <div class="ContainerBtnTitle">
+        <h1 class="page-title">Categorías de Productos</h1>
+
+        <button id="openModalBtn" class="btn-add">
+            <span class="btn-icon">+</span>
+            <span class="btn-text">Agregar</span>
+        </button>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var ingredientes in Model)
+                {
+                    <tr>
+                        <th scope="row">@Html.DisplayFor(m => ingredientes.IdIngrediente)</th>
+                        <td>@Html.DisplayFor(m => ingredientes.Nombre)</td>
+                        @if (ingredientes.Estado == true)
+                        {
+                            <td>Activo</td>
+                        }
+                        else
+                        {
+                            <td>Inactivo</td>
+
+                        }
+
+                        <td>
+                            <button>
+                                Agregar
+                            </button>
+                        </td>
+                    </tr>
+                }
+
+            }
+            else
+            {
+                <tr>
+                    <td colspan="4" style="text-align: center;">No hay ingredientes en esta categoría</td>
+                </tr>
+
+            }
+
+
+        </tbody>
+    </table>
+</div>

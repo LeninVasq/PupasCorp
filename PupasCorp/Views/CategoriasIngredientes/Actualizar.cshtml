@@ -6,7 +6,7 @@
     <div class="modal-content">
         <span class="close" id="closeModalActualizar">&times;</span>
 
-        <form enctype="multipart/form-data" asp-action="Create">
+        <form enctype="multipart/form-data" asp-action="Editar">
             <div class="form-group">
                 <label class="image-upload" for="Fotos">
                     <i class="fas fa-cloud-upload-alt"></i>
@@ -18,7 +18,8 @@
                 </label>
             </div>
 
-            <input type="hidden" id="fotoBase64" name="FotoBase64" />
+            <input type="hidden" asp-for="Id" id="fotoBase64" name="FotoBase64" />
+            <input type="hidden" id="categoriaId"  />
 
             <div class="form-group">
                 <label for="nombre">Nombre</label>
