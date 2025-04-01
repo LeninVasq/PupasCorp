@@ -114,7 +114,7 @@ namespace PupasCorp.Controllers
                 };
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Login");
             }
 
             

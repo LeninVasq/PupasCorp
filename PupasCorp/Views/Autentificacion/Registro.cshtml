@@ -4,52 +4,140 @@
     Layout = null;
 }
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-<h1>Registro</h1>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://images.squarespace-cdn.com/content/v1/613e207ecbe42f2db3334200/2c57ce14-3970-4c12-b443-7a075831f3e7/_MG_1399.JPG?format=1500w') no-repeat center center/cover;
+        }
 
-<div class="row">
-    <div class="col-md-4">
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.3); /* Capa de color negro con opacidad */
+                z-index: -1; /* Asegura que la capa esté detrás del contenido */
+            }
+
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .form-container {
+            position: relative;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 350px;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #4f46e5;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .signup {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+            .signup a {
+                color: blue;
+                text-decoration: none;
+            }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="form-container">
+        <h2>Registro</h2>
+        <p>Ingresa tus datos para registrarte</p>
         <form asp-action="Registro">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-            <div class="form-group">
-                <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
-                <span asp-validation-for="Nombre" class="text-danger"></span>
+            <div class="input-group">
+                <label>Nombre</label>
+                <input type="text" asp-for="Nombre" id="nombre" placeholder="Tu nombre" required>
             </div>
-
-
-            <div class="form-group">
-                <label asp-for="Apellido" class="control-label"></label>
-                <input asp-for="Apellido" class="form-control" />
-                <span asp-validation-for="Apellido" class="text-danger"></span>
+            <div class="input-group">
+                <label>Apellidos</label>
+                <input type="text" asp-for="Apellido" id="apellidos" placeholder="Tus apellidos" required>
             </div>
-
-            <div class="form-group">
-                <label asp-for="Correo" class="control-label"></label>
-                <input asp-for="Correo" type="email" class="form-control" />
-                <span asp-validation-for="Correo" class="text-danger"></span>
+            <div class="input-group">
+                <label>Correo</label>
+                <input type="email" asp-for="Correo" id="correo" placeholder="correo@example.com" required>
             </div>
-            
-            <div class="form-group">
-                <label asp-for="Telefono" class="control-label"></label>
-                <input asp-for="Telefono" class="form-control" />
-                <span asp-validation-for="Telefono" class="text-danger"></span>
+            <div class="input-group">
+                <label>Teléfono</label>
+                <input type="tel" asp-for="Telefono" id="telefono" placeholder="123-456-7890" required>
             </div>
-            
-            <div class="form-group">
-                <label asp-for="Contrasenia" class="control-label"></label>
-                <input asp-for="Contrasenia" type="password" class="form-control" />
-                <span asp-validation-for="Contrasenia" class="text-danger"></span>
+            <div class="input-group">
+                <label>Contraseña</label>
+                <input type="password" asp-for="Contrasenia" id="password" placeholder="****" required>
             </div>
-           
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" />
-            </div>
-
+            <button type="submit">Registrarse</button>
         </form>
+        <p class="signup">¿Ya tienes cuenta? <a href="#">Inicia sesión</a></p>
     </div>
-</div>
+
+    
+</body>
+</html>
 
 
 <!-- recibo el error -->
