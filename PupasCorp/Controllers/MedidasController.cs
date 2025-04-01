@@ -43,6 +43,61 @@ namespace PupasCorp.Controllers
             .ToList();
             //sirve para enviar un mensaje a vista
             //TempData["Mensaje"] = string.Join(" | ", errors);
+
+            return View(model);
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Cambiar_estado(Medida model)
+        {
+            if (ModelState.IsValid)
+            {
+                bool estado = false;
+                if (model.Estado == "1")
+                {
+                    estado = true;
+
+                }
+                else
+                {
+                    estado = false;
+
+                }
+
+                var medida = await _context.UnidadMedida.FindAsync(model.IdUnidadMedida);
+
+                if (medida != null)
+                {
+                    TempData["Update"] = "Se ha actualizado";
+
+                    medida.Nombre = model.Nombre;
+                    medida.Estado = estado;
+
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("Index");
+
+                }
+                else
+                {
+                    TempData["Update"] = "no se "+ model.IdUnidadMedida;
+                    return RedirectToAction("Index");
+
+
+                }
+
+                TempData["Update"] = "No Se ha actualizado";
+
+                return RedirectToAction("Index");
+            }
+
+
+            var errors = ModelState.Values
+            .SelectMany(v => v.Errors)
+            .Select(e => e.ErrorMessage)
+            .ToList();
+            //sirve para enviar un mensaje a vista
+            //TempData["Mensaje"] = string.Join(" | ", errors);
             TempData["Mensaje"] = "HOLA";
 
             return View(model);
