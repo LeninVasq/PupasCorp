@@ -86,9 +86,6 @@ namespace PupasCorp.Controllers
 
                 }
 
-                TempData["Update"] = "No Se ha actualizado";
-
-                return RedirectToAction("Index");
             }
 
 

@@ -32,7 +32,7 @@
                     </div>
                     <div class="card-content">
                         <div class="image-container">
-                            <img src="data:image/png;base64,@categoriasIngrediente.Foto"
+                            <img src="@categoriasIngrediente.Foto"
                                  alt="Electrónicos"
                                  class="category-image" />
                         </div>
@@ -51,7 +51,8 @@
                             data-id="@categoriasIngrediente.IdCategoriasIngredientes"
                             data-nombre="@categoriasIngrediente.Nombre"
                             data-foto="@categoriasIngrediente.Foto"
-                                    data-descrip="@categoriasIngrediente.Descripcion">
+                                    data-descrip="@categoriasIngrediente.Descripcion"
+                            data-estado="@categoriasIngrediente.Estado">
                             Actualizar
                             </button>
 
@@ -86,6 +87,7 @@
             var inputNombre = document.getElementById("Nombre");
             var inputFoto = document.getElementById("fotoBase64");
             var inputDesc = document.getElementById("descripcion");
+            var inputEstado = document.getElementById("estadoCateIngre");
 
             openModalBtns.forEach(function (btn) {
                 btn.onclick = function () {
@@ -93,12 +95,21 @@
                 var CategoriaNombre = btn.getAttribute("data-nombre");
                 var CategoriaFoto = btn.getAttribute("data-foto");
                 var CategoriaDescrip = btn.getAttribute("data-descrip");
+                    var CategoriaEstado = btn.getAttribute("data-estado");
+              if(CategoriaEstado == "True"){
+                        estado = 1;
+                }
+                else{
+                    estado = 0;
+                    }
                 if (inputId) {
                     inputId.value = categoriaId;
                     }
                 if(inputNombre)inputNombre.value = CategoriaNombre;
                      if(inputFoto)inputFoto.value = CategoriaFoto;
      if(inputFoto)inputDesc.value = CategoriaDescrip;
+                          if(inputEstado)inputEstado.value = estado;
+
 
                 modal.style.display = "block"; // Muestra el modal
             };

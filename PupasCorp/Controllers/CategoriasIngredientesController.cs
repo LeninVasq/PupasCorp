@@ -28,14 +28,57 @@ namespace PupasCorp.Controllers
             return View(categoriaIngre);
        }
 
-        public IActionResult actualizar(int id)
+        [HttpPost]
+        public async Task<IActionResult> Update(CategoriaIngre model)
         {
-            return View(id);
+            if (ModelState.IsValid)
+            {
+                bool estado = false;
+                if (model.Estado == "1")
+                {
+                    estado = true;
+                }
+                else
+                {
+                    estado = false;
+                }
+                var categoriaingre = await _context.CategoriasIngredientes.FindAsync(model.Id);
+                if (categoriaingre != null)
+                {
+                    TempData["Update"] = "Se ha actualizado";
+
+                    categoriaingre.Nombre = model.Nombre;
+                    categoriaingre.Foto = model.Fotobase;
+                    categoriaingre.Descripcion = model.Descripcion;
+                    categoriaingre.Estado = estado;
+
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("Index");
+
+                }
+                else
+                {
+                    TempData["Update"] = "no se " + model.Id;
+                    return RedirectToAction("Index");
+
+
+                }
+
+            }
+
+            var errors = ModelState.Values
+                .SelectMany(v => v.Errors)
+                .Select(e => e.ErrorMessage)
+                .ToList();
+            //sirve para enviar un mensaje a vista
+            //TempData["Mensaje"] = string.Join(" | ", errors);
+            TempData["Mensaje"] = "HOLA";
+
+            return View(model);
         }
 
 
-
-    [HttpPost]
+        [HttpPost]
         public async Task<IActionResult> Create(CategoriaIngre model)
         {
             if (ModelState.IsValid)
@@ -53,7 +96,7 @@ namespace PupasCorp.Controllers
                         var categoria_ingredientes = new CategoriasIngrediente()
                         {
                         Nombre = model.Nombre,
-                        Foto = base64String,
+                        Foto = "data:image/png;base64,"+base64String,
                         Descripcion = model.Descripcion,
                         Estado = true                    
                         };
@@ -83,5 +126,6 @@ namespace PupasCorp.Controllers
         }
     }
 
-    
+   
+
 }

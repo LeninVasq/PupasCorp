@@ -1,25 +1,74 @@
 ﻿@using PupasCorp.Models.ViewModels
 @model CategoriaIngre
 
+
+<style>
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+    }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 20px;
+    }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+    input:checked + .slider {
+        background-color: #007bff;
+    }
+
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+
+</style>
 <!--Modal-->
 <div id="Actualizar" class="modal">
     <div class="modal-content">
         <span class="close" id="closeModalActualizar">&times;</span>
 
-        <form enctype="multipart/form-data" asp-action="Editar">
+        <form enctype="multipart/form-data" asp-action="Update">
             <div class="form-group">
                 <label class="image-upload" for="Fotos">
                     <i class="fas fa-cloud-upload-alt"></i>
                     <div class="image-upload-text actualizar-preview">
                         <strong>Haga clic para subir</strong> o arrastre una imagen aquí
                     </div>
-                    <input asp-for="Foto" type="file" id="Fotos" class="file-input" accept="image/*"
+                    <input type="file" id="Fotos" class="file-input" accept="image/*"
                            onchange="Image(event, 'actualizar-preview')">
                 </label>
             </div>
 
-            <input type="hidden" asp-for="Id" id="fotoBase64" name="FotoBase64" />
-            <input type="hidden" id="categoriaId"  />
+            <input type="hidden" asp-for="Fotobase" id="fotoBase64" name="Fotobase" />
+
+            <input type="hidden" asp-for="Id" id="categoriaId" name="Id" />
 
             <div class="form-group">
                 <label for="nombre">Nombre</label>
@@ -31,6 +80,15 @@
                 <textarea id="descripcion" asp-for="Descripcion" name="descripcion" placeholder="Describe el producto..." class="form-control"></textarea>
             </div>
 
+            <label class="switch mt-3">
+                <input type="checkbox" id="estadoCatein">
+                <span class="slider round"></span>
+            </label>
+            <label for="estado" id="estadoLabelCateIngre">Activo</label>
+
+            <input type="hidden" asp-for="Estado" id="estadoCateIngre" name="Estado">
+
+
             <div class="form-actions">
                 <button type="button" id="closeModalBtnActualizar" class="btns btns-secondary">Cerrar</button>
                 <button type="submit" class="btns btns-primary">Guardar cambios</button>
@@ -40,25 +98,91 @@
 </div>
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let estado = document.getElementById("estadoCatein");
+        let label = document.getElementById("estadoLabelCateIngre");
+        let estadoentrante = document.getElementById("estadoCateIngre");
+
+        function actualizarCheckbox() {
+            let valorDelBackend = estadoentrante.value.trim();
+
+            if (valorDelBackend === "1") {
+                estado.checked = true;
+                label.textContent = "Activo";
+            } else {
+                estado.checked = false;
+                label.textContent = "Inactivo";
+            }
+        }
+
+        let valorAnterior = estadoentrante.value;
+
+        setInterval(() => {
+            if (estadoentrante.value !== valorAnterior) {
+                valorAnterior = estadoentrante.value;
+                actualizarCheckbox();
+            }
+        }, 200);
+
+        estado.addEventListener("change", function () {
+            estadoHidden.value = estado.checked ? "1" : "0";
+            label.textContent = estado.checked ? "Activo" : "Inactivo";
+        });
+
+        actualizarCheckbox();
+    });
+</script>
 
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let Base64 = document.getElementById("fotoBase64");
+
+        const intervalo = setInterval(() => {
+            if (Base64 && Base64.value.trim()) {
+                mostrarVistaPrevia(Base64.value, 'actualizar-preview');
+                clearInterval(intervalo); 
+            }
+        }, 200);
+
+        let lastValue = Base64.value;
+        setInterval(() => {
+            if (Base64.value !== lastValue) {
+                lastValue = Base64.value;
+                mostrarVistaPrevia(Base64.value, 'actualizar-preview');
+            }
+        }, 200);
+    });
+
     function Image(event, previewClass) {
         const file = event.target.files[0];
         if (file) {
             const reader = new FileReader();
             reader.onload = function (e) {
-                // Seleccionar la vista previa correcta según el modal
-                const uploadText = document.querySelector(`.${previewClass}`);
+                const base64String = e.target.result;
 
-                if (uploadText) {
-                    uploadText.innerHTML = `
-                            <img src="${e.target.result}" alt="Vista previa"
-                            style="max-width: 50%; max-height: 25%; margin-top: 10px;
-                            border: 1px solid #ccc; padding: 5px;">`;
+                let inputBase64 = document.getElementById("fotoBase64");
+                if (inputBase64) {
+                    inputBase64.value = base64String;
                 }
+
+                mostrarVistaPrevia(base64String, previewClass);
             };
             reader.readAsDataURL(file);
         }
     }
+
+    function mostrarVistaPrevia(base64, previewClass) {
+        const previewContainer = document.querySelector(`.${previewClass}`);
+        if (previewContainer) {
+            previewContainer.innerHTML = base64
+                ? `<img src="${base64}" alt="Vista previa"
+                            style="max-width: 50%; max-height: 25%; margin-top: 10px;
+                            border: 1px solid #ccc; padding: 5px;">`
+                : `<p>No hay imagen seleccionada.</p>`;
+        }
+    }
 </script>
+
+
 
