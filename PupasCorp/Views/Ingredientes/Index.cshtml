@@ -18,7 +18,11 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nombre</th>
+                <th scope="col">Foto</th>
+                <th scope="col">Nombre</th> 
+                <th scope="col">Descripcion</th>
+                <th scope="col">Sctok</th>
+                <th scope="col">Medida</th>
                 <th scope="col">Estado</th>
                 <th scope="col">Acciones</th>
             </tr>
@@ -30,6 +34,16 @@
                 {
                     <tr>
                         <th scope="row">@Html.DisplayFor(m => ingredientes.IdIngrediente)</th>
+                        <td style="padding: 0; margin: 0;">
+                            <img src="data:image/png;base64,@ingredientes.Foto"
+                                 alt="Electrónicos"
+                                 style="max-width: 10%; max-height: 10%; display: block; width: auto; height: auto;"
+                                 class="category-image" />
+                        </td>
+                        <td>@Html.DisplayFor(m => ingredientes.Nombre)</td>
+
+                        <td>@Html.DisplayFor(m => ingredientes.Descripcion)</td>
+                        <td>@Html.DisplayFor(m => ingredientes.Stock)</td>
                         <td>@Html.DisplayFor(m => ingredientes.Nombre)</td>
                         @if (ingredientes.Estado == true)
                         {

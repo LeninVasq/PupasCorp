@@ -10,11 +10,11 @@
 
         public int? Stock { get; set; }
 
-        public string? Foto { get; set; }
+        public IFormFile? Foto { get; set; }
 
         public bool? Estado { get; set; }
 
-        public int? IdUnidadMedida { get; set; }
+        public string? IdUnidadMedida { get; set; }
 
         public int? IdCategoriasIngredientes { get; set; }
     }

@@ -16,10 +16,12 @@ namespace PupasCorp.Controllers
 
         }
 
-        [HttpPost]
+        
         public IActionResult Index(int id)
         {
             ViewData["Unidad"] = new SelectList(_context.UnidadMedida, "IdUnidadMedida", "Nombre");
+            HttpContext.Session.SetString("Id", id.ToString());
+
             var ingredientes = _context.Ingredientes
                                         .Include(t => t.IdCategoriasIngredientesNavigation)
                                         .Where(i => i.IdCategoriasIngredientes == id) // Filtramos por 'id'
@@ -29,9 +31,35 @@ namespace PupasCorp.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Create(CategoriaIngre model)
+        public async Task<IActionResult> Create(ingredi model)
         {
-            return View();
+            var Id = int.Parse(HttpContext.Session.GetString("Id"));
+            var idunidad = int.Parse(model.IdUnidadMedida);
+
+            if (ModelState.IsValid)
+            {
+                using (var ms = new MemoryStream())
+                {
+                    model.Foto.CopyTo(ms);
+                    byte[] imageBytes = ms.ToArray();
+                    string base64String = Convert.ToBase64String(imageBytes);
+                    var ingre = new Ingrediente()
+                    {
+                        Nombre = model.Nombre,
+                        Descripcion = model.Descripcion,
+                        Stock = 0,
+                        Foto = base64String,
+                        IdUnidadMedida = idunidad,
+                        IdCategoriasIngredientes = Id,
+                        Estado = true
+                    };
+                    _context.Add(ingre);
+                    await _context.SaveChangesAsync();
+                    TempData["Mensaje"] = "Se ha resgistrado exitasamente el nuevo ingrediente";
+                    return RedirectToAction("Index", new { id = Id });
+                }
+            }
+            return RedirectToAction("Index");
         }
     }
 }
