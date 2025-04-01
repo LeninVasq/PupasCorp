@@ -1,83 +1,295 @@
 ﻿<style>
+
     .table-wrapper {
 
         height: 100vh;
+
         margin-left: 500px;
+
     }
+
+
 
     .table-container {
+
         background: white;
+
         width: 100%;
+
         max-width: 600px;
+
         padding: 20px;
+
         border-radius: 12px;
+
         box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+
         align-items: center;
+
         align-content: center;
+
     }
+
+
 
     table {
+
         width: 100%;
+
         border-collapse: collapse;
+
         border-radius: 10px;
+
         overflow: hidden;
+
     }
+
+
 
     th, td {
+
         padding: 12px 15px;
+
         text-align: center;
+
         border-bottom: 2px solid #dee2e6;
+
     }
+
+
 
     th {
+
         background: #007BFF;
+
         color: white;
+
     }
+
+
 
     td {
+
         background: #f9f9f9;
+
         color: #333;
+
     }
+
+
 
     tr:last-child td {
+
         border-bottom: none;
+
     }
+
+
 
     tr:nth-child(even) td {
+
         background: #e9ecef;
+
     }
+
+
 
     tr:hover td {
+
         background: #d6e4ff;
+
         transition: 0.3s ease-in-out;
+
     }
+
 </style>
+
+    @model List<UnidadMedidum>
+
+    @using PupasCorp.Models.ViewModels
+
+@await Html.PartialAsync("CreateMedida", new Medida())
+
+
+
 <div class="containerCategoriasIngredientes">
 
+
+
     <div class="ContainerBtnTitle">
+
         <h1 class="page-title">Categorías de Productos</h1>
 
+
+
         <button id="openModalBtn" class="btn-add">
+
             <span class="btn-icon">+</span>
+
             <span class="btn-text">Agregar</span>
+
         </button>
+
     </div>
+
     <table>
+
         <thead>
+
             <tr>
+
                 <th>ID</th>
+
                 <th>Nombre</th>
-                <th>Edad</th>
-                <th>País</th>
+
+                <th>Estado</th>
+
+                <th>Acciones</th>
+
             </tr>
+
         </thead>
+
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Juan Pérez</td>
-                <td>28</td>
-                <td>Argentina</td>
-            </tr>
+
+            @if (Model != null && Model.Any())
+
+            {
+
+                @foreach (var medida in Model)
+
+                {
+
+                    <tr>
+
+                        <th scope="row">@Html.DisplayFor(m => medida.IdUnidadMedida)</th>
+
+                        <td>@Html.DisplayFor(m => medida.Nombre)</td>
+
+                        @if (medida.Estado == true)
+
+                        {
+
+                            <td>Activo</td>
+
+                        }
+
+                        else
+
+                        {
+
+                            <td>Inactivo</td>
+
+
+
+                        }
+
+
+
+                        <td>
+
+                            <button>
+
+                                Agregar
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                }
+
+
+
+            }
+
+            else
+
+            {
+
+                <tr>
+
+                    <td colspan="4" style="text-align: center;">No hay medidas </td>
+
+                </tr>
+
+
+
+            }
+
+
+
+
+
         </tbody>
+
     </table>
+
 </div>
+
+<script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+        var modal = document.getElementById("MedidaModal");
+
+        var closeModalBtn = document.getElementById("closeModalProduct");
+
+        var closeModalBtnProduct = document.getElementById("closeModalBtnProduct");
+
+        var openModalBtn = document.getElementById("openModalBtn");
+
+
+
+        if (openModalBtn) {
+
+            openModalBtn.onclick = function () {
+
+                modal.style.display = "block";
+
+            };
+
+        }
+
+
+
+         if (closeModalBtn) {
+
+        closeModalBtn.addEventListener("click", function () {
+
+            modal.style.display = "none";
+
+        });
+
+    }
+
+
+
+        if (closeModalBtnProduct) {
+
+        closeModalBtnProduct.addEventListener("click", function (event) {
+
+            event.preventDefault(); // Evita cualquier comportamiento inesperado del botón
+
+            modal.style.display = "none";
+
+        });
+
+    }
+
+        window.onclick = function (event) {
+
+            if (event.target === modal) {
+
+                modal.style.display = "none";
+
+            }
+
+        };
+
+    });
+
+
+
+</script>

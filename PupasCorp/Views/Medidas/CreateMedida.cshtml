@@ -1,5 +1,27 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@using PupasCorp.Models.ViewModels
+@model Medida
+
+<!--Modal-->
+<!-- Modal de Producto -->
+<div id="MedidaModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModalProduct" class="close">&times;</span>
+
+        <form enctype="multipart/form-data" asp-action="Create">
+
+
+
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" asp-for="Nombre" id="nombre" name="nombre" placeholder="Nombre del producto" class="form-control">
+            </div>
+
+
+            <div class="form-actions">
+                <button type="button" id="closeModalBtnProduct" class="btns btns-secondary">Cerrar</button>
+                <button type="submit" class="btns btns-primary">Guardar cambios</button>
+            </div>
+        </form>
+
+    </div>
+</div>
