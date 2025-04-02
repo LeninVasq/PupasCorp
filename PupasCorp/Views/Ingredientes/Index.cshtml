@@ -3,6 +3,7 @@
 
 
 @await Html.PartialAsync("Create", new Ingredien())
+@await Html.PartialAsync("Update", new Ingredien())
 
 <div class="containerCategoriasIngredientes">
 
@@ -35,7 +36,7 @@
                     <tr>
                         <th scope="row">@Html.DisplayFor(m => ingredientes.IdIngrediente)</th>
                         <td style="padding: 0; margin: 0;">
-                            <img src="data:image/png;base64,@ingredientes.Foto"
+                            <img src="@ingredientes.Foto"
                                  alt="Electrónicos"
                                  style="max-width: 15%; max-height: 15%; display: block; width: auto; height: auto;"
                                  class="category-image" />
@@ -56,8 +57,13 @@
                         }
 
                         <td>
-                            <button>
-                                Agregar
+                            <button class="btn btn-secondary openModalBtnActuCate"
+                                    data-id="@ingredientes.IdIngrediente"
+                                    data-nombre="@ingredientes.Nombre"
+                                    data-foto="@ingredientes.Foto"
+                                    data-descrip="@ingredientes.Descripcion"
+                                    data-estado="@ingredientes.Estado">
+                                Actualizar
                             </button>
                         </td>
                     </tr>
@@ -76,6 +82,75 @@
         </tbody>
     </table>
 </div>
+
+
+@if (TempData["Update"] != null)
+{
+    <script>
+        var mensaje = "@Html.Raw(TempData["Update"])";
+        alert(mensaje);
+    </script>
+}
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("Actualizar");
+        var closeModalBtn = document.getElementById("closeModalActualizarCateIngre");
+        var openModalBtns = document.querySelectorAll(".openModalBtnActuCate"); // Selecciona todos los botones "Actualizar"
+        var inputId = document.getElementById("IdIngrediente");
+        var closeModalBtnActualizar = document.getElementById("closeModalBtnActualizarCateIngre");
+
+        var inputNombre = document.getElementById("Nombre");
+        var inputFoto = document.getElementById("fotoBase64");
+        var inputDesc = document.getElementById("descripcioncateingre");
+        var inputEstado = document.getElementById("estadoCateIngre");
+
+        openModalBtns.forEach(function (btn) {
+            btn.onclick = function () {
+                var categoriaId = btn.getAttribute("data-id");
+                var CategoriaNombre = btn.getAttribute("data-nombre");
+                var CategoriaFoto = btn.getAttribute("data-foto");
+                var CategoriaDescrip = btn.getAttribute("data-descrip");
+                var CategoriaEstado = btn.getAttribute("data-estado");
+                if (CategoriaEstado == "True") {
+                    estado = 1;
+                }
+                else {
+                    estado = 0;
+                }
+                if (inputId) {
+                    inputId.value = categoriaId;
+                }
+                if (inputNombre) inputNombre.value = CategoriaNombre;
+                if (inputFoto) inputFoto.value = CategoriaFoto;
+                if (inputFoto) inputDesc.value = CategoriaDescrip;
+                if (inputEstado) inputEstado.value = estado;
+
+
+                modal.style.display = "block"; // Muestra el modal
+            };
+        });
+
+        if (closeModalBtnActualizar) {
+            closeModalBtnActualizar.addEventListener("click", function (event) {
+                event.preventDefault();
+                modal.style.display = "none";
+            });
+        }
+        closeModalBtn.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    });
+</script>
+
+
 
 
 <script>

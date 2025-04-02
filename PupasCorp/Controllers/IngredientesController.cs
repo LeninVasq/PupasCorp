@@ -31,6 +31,63 @@ namespace PupasCorp.Controllers
 
 
         [HttpPost]
+        public async Task<IActionResult> UpdateIngre(Ingredien model)
+        {
+            var Id = int.Parse(HttpContext.Session.GetString("Id"));
+
+            if (ModelState.IsValid)
+            {
+                var ingrediente = await _context.Ingredientes.FindAsync(model.IdIngrediente);
+
+                if (ingrediente != null)
+                {
+
+                    var idunidad = int.Parse(model.IdUnidadMedida);
+
+                    bool estado = false;
+                    if (model.Estado == "1")
+                    {
+                        estado = true;
+                    }
+                    else
+                    {
+                        estado = false;
+                    }
+
+                    ingrediente.Nombre = model.Nombre;
+                    ingrediente.Foto = model.FotoBase64;
+                    ingrediente.Descripcion = model.Descripcion;
+                    ingrediente.IdUnidadMedida = idunidad;
+                    ingrediente.Estado = estado;
+
+                    TempData["Update"] = "Se ha actualizado";
+
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("Index", new { id = Id });
+
+                }
+                else
+                {
+                    TempData["Update"] = "no se encontro " + model.IdIngrediente;
+                    return RedirectToAction("Index", new { id = Id });
+
+
+                }
+
+            }
+
+            var errors = ModelState.Values
+                .SelectMany(v => v.Errors)
+                .Select(e => e.ErrorMessage)
+                .ToList();
+            //sirve para enviar un mensaje a vista
+            //TempData["Mensaje"] = string.Join(" | ", errors);
+            TempData["Mensaje"] = "HOLA";
+
+            return View(model);
+        }
+
+        [HttpPost]
         public async Task<IActionResult> Create(Ingredien model)
         {
             var Id = int.Parse(HttpContext.Session.GetString("Id"));
@@ -48,7 +105,7 @@ namespace PupasCorp.Controllers
                         Nombre = model.Nombre,
                         Descripcion = model.Descripcion,
                         Stock = 0,
-                        Foto = base64String,
+                        Foto = "data:image/png;base64," + base64String,
                         IdUnidadMedida = idunidad,
                         IdCategoriasIngredientes = Id,
                         Estado = true
