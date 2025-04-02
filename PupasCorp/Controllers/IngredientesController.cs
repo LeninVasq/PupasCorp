@@ -20,6 +20,8 @@ namespace PupasCorp.Controllers
         public IActionResult Index(int id)
         {
             ViewData["Unidad"] = new SelectList(_context.UnidadMedida, "IdUnidadMedida", "Nombre");
+            ViewData["Movimiento"] = new SelectList(_context.TiposMovimientos, "IdTipoMovimientos", "TipoMovimientos");
+
             HttpContext.Session.SetString("Id", id.ToString());
 
             var ingredientes = _context.Ingredientes

@@ -52,7 +52,7 @@ namespace PupasCorp.Controllers
                 var Id = resultado.FirstOrDefault()?.IdUsuario;
                 string encrypted = encrip.Encrypt(fusion);
 
-                HttpContext.Session.SetString("Id", Id.ToString());
+                HttpContext.Session.SetString("IdUsuario", Id.ToString());
 
 
                 var mensaje = "Creacion de token";
@@ -78,7 +78,7 @@ namespace PupasCorp.Controllers
          public async Task<IActionResult> logout()
         {
 
-            var Id = int.Parse(HttpContext.Session.GetString("Id"));
+            var Id = int.Parse(HttpContext.Session.GetString("IdUsuario"));
                 var mensaje = "Eliminacion";
                 var token = await _context.Set<Tokens>()
                     .FromSqlRaw("EXEC Token @Token,@Mensaje ,@Id",
