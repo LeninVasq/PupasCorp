@@ -1,0 +1,178 @@
+﻿@model List<Menu>
+@using PupasCorp.Models.ViewModels
+
+
+@await Html.PartialAsync("Create", new Menus())
+@await Html.PartialAsync("Update", new Menus())
+
+
+<div class="containerCategoriasIngredientes">
+
+    <div class="ContainerBtnTitle">
+        <h1 class="page-title">Menus</h1>
+
+        <button id="openModalBtn" class="btn-add">
+            <span class="btn-icon">+</span>
+            <span class="btn-text">Agregar</span>
+        </button>
+    </div>
+
+    <div class="category-grid">
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var menu in Model)
+            {
+                <div class="category-card">
+                    <div class="card-header">
+                        <div class="card-title-row">
+                            <h3 class="card-title">@Html.DisplayFor(m => menu.Nombre)</h3>
+                            <span class="product-count">@Html.DisplayFor(m => menu.IdMenu)</span>
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <div class="image-container">
+                            <img src="@menu.Foto"
+                                 alt="Electrónicos"
+                                 class="category-image" />
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="button-container">
+
+                            <form asp-controller="Ingredientes" asp-action="Index" method="get">
+                                <input type="hidden" name="id" value="@menu.IdMenu" />
+                                <button type="submit" class="btn btn-primary">Producto</button>
+                            </form>
+
+
+
+                            <button class="btn btn-secondary MenuModalActualizar"
+                                    data-id="@menu.IdMenu"
+                                    data-nombre="@menu.Nombre"
+                                    data-foto="@menu.Foto"
+                                    data-descrip="@menu.Descripcion"
+                                    data-estado="@menu.Estado">
+                                Actualizar
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="empty-state-section">
+                <div class="empty-state">
+                    <p class="empty-message">No hay categorías disponibles</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+<!--Script modal-->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("MenuModalActualizar");
+        var closeModalBtn = document.getElementById("closeModalActualizarMenu");
+        var openModalBtns = document.querySelectorAll(".MenuModalActualizar"); // Selecciona todos los botones "Actualizar"
+        var inputId = document.getElementById("IdMenu");
+        var closeModalBtnActualizar = document.getElementById("closeModalBtnActualizarMenu");
+
+        var inputNombre = document.getElementById("Nombremenu");
+        var inputFoto = document.getElementById("fotoBase64Menu");
+        var inputDesc = document.getElementById("descripcionmenu");
+        var inputEstado = document.getElementById("estadoMenu");
+
+        openModalBtns.forEach(function (btn) {
+            btn.onclick = function () {
+                var categoriaId = btn.getAttribute("data-id");
+                var CategoriaNombre = btn.getAttribute("data-nombre");
+                var CategoriaFoto = btn.getAttribute("data-foto");
+                var CategoriaDescrip = btn.getAttribute("data-descrip");
+                var CategoriaEstado = btn.getAttribute("data-estado");
+                if (CategoriaEstado == "True") {
+                    estado = 1;
+                }
+                else {
+                    estado = 0;
+                }
+                if (inputId) {
+                    inputId.value = categoriaId;
+                }
+                if (inputNombre) inputNombre.value = CategoriaNombre;
+                if (inputFoto) inputFoto.value = CategoriaFoto;
+                if (inputFoto) inputDesc.value = CategoriaDescrip;
+                if (inputEstado) inputEstado.value = estado;
+
+
+                modal.style.display = "block"; // Muestra el modal
+            };
+        });
+
+        if (closeModalBtnActualizar) {
+            closeModalBtnActualizar.addEventListener("click", function (event) {
+                event.preventDefault();
+                modal.style.display = "none";
+            });
+        }
+        closeModalBtn.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    });
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("MenuModal");
+        var closeModalBtn = document.getElementById("closeModalMenu");
+        var closeModalBtnProduct = document.getElementById("closeModalBtnMenu");
+        var openModalBtn = document.getElementById("openModalBtn");
+
+        if (openModalBtn) {
+            openModalBtn.onclick = function () {
+                modal.style.display = "block";
+            };
+        }
+
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+        }
+
+        if (closeModalBtnProduct) {
+            closeModalBtnProduct.addEventListener("click", function (event) {
+                event.preventDefault(); // Evita cualquier comportamiento inesperado del botón
+                modal.style.display = "none";
+            });
+        }
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    });
+
+</script>
+
+<!--Script para mostrar la img-->
+@if (TempData["Mensaje"] != null)
+{
+    <script>
+        var mensaje = "@Html.Raw(TempData["Mensaje"])";
+        alert(mensaje);
+    </script>
+}
