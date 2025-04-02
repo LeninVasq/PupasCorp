@@ -62,6 +62,8 @@ public partial class PupascorpContext : DbContext
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
+   
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Name=PupasCorn_Context");
 
@@ -336,6 +338,7 @@ public partial class PupascorpContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("Fecha_entrega");
             entity.Property(e => e.IdUsuario).HasColumnName("Id_usuario");
+            entity.Property(e => e.Observaciones).HasColumnType("text");
 
             entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.Pedidos)
                 .HasForeignKey(d => d.IdUsuario)

@@ -31,7 +31,7 @@ namespace PupasCorp.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Create(ingredi model)
+        public async Task<IActionResult> Create(Ingredien model)
         {
             var Id = int.Parse(HttpContext.Session.GetString("Id"));
             var idunidad = int.Parse(model.IdUnidadMedida);

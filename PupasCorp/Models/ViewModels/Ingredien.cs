@@ -1,6 +1,6 @@
 ﻿namespace PupasCorp.Models.ViewModels
 {
-    public class ingredi
+    public class Ingredien
     {
         public int? IdIngrediente { get; set; }
 

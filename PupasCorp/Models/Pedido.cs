@@ -13,6 +13,8 @@ public partial class Pedido
 
     public bool Estado { get; set; }
 
+    public string? Observaciones { get; set; }
+
     public virtual ICollection<Entrega> Entregas { get; set; } = new List<Entrega>();
 
     public virtual Usuario IdUsuarioNavigation { get; set; } = null!;

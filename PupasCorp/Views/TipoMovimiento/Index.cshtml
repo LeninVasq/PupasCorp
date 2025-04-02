@@ -1,0 +1,319 @@
+﻿<style>
+
+    .table-wrapper {
+        height: 100vh;
+        margin-left: 500px;
+    }
+
+
+
+    .table-container {
+        background: white;
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        align-items: center;
+        align-content: center;
+    }
+
+
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+
+
+    th, td {
+        padding: 12px 15px;
+        text-align: center;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+
+
+    th {
+        background: #007BFF;
+        color: white;
+    }
+
+
+
+    td {
+        background: #f9f9f9;
+        color: #333;
+    }
+
+
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+
+
+    tr:nth-child(even) td {
+        background: #e9ecef;
+    }
+
+
+
+    tr:hover td {
+        background: #d6e4ff;
+        transition: 0.3s ease-in-out;
+    }
+
+</style>
+
+    @model List<TiposMovimiento>
+
+    @using PupasCorp.Models.ViewModels
+@await Html.PartialAsync("Create", new TipoMovimiento())
+@await Html.PartialAsync("Update", new TipoMovimiento())
+
+
+
+
+<div class="containerCategoriasIngredientes">
+
+
+
+    <div class="ContainerBtnTitle">
+
+        <h1 class="page-title">Tipo Movimiento</h1>
+
+
+
+        <button id="openModalBtn" class="btn-add">
+
+            <span class="btn-icon">+</span>
+
+            <span class="btn-text">Agregar</span>
+
+        </button>
+
+    </div>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Nombre</th>
+
+                <th>Acciones</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            @if (Model != null && Model.Any())
+
+            {
+
+                @foreach (var movimiento in Model)
+
+                {
+
+                    <tr>
+
+                        <th scope="row">@Html.DisplayFor(m => movimiento.IdTipoMovimientos)</th>
+
+                        <td>@Html.DisplayFor(m => movimiento.TipoMovimientos)</td>
+
+
+
+
+                        <td>
+
+
+
+
+
+
+
+
+                            <button class="btn btn-secondary tipoMovimientosUpdate"
+                                    data-id="@movimiento.IdTipoMovimientos"
+                                    data-tipoMovimientos="@movimiento.TipoMovimientos">
+                                Actualizar
+                            </button>
+
+
+
+
+
+
+
+
+
+                        </td>
+
+                    </tr>
+
+                }
+
+
+
+            }
+
+            else
+
+            {
+
+                <tr>
+
+                    <td colspan="4" style="text-align: center;">No hay tipos de movimientos </td>
+
+                </tr>
+
+
+
+            }
+
+
+
+
+
+        </tbody>
+
+    </table>
+
+</div>
+
+@if (TempData["Update"] != null)
+
+{
+    <script>
+        var mensaje = "@Html.Raw(TempData["Update"])";
+        alert(mensaje);
+    </script>
+}
+
+@if (TempData["Mensaje"] != null)
+
+{
+    <script>
+        var mensaje = "@Html.Raw(TempData["Mensaje"])";
+        alert(mensaje);
+    </script>
+}
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("TipoMovimientoModalUpdate");
+        var closeModalBtn = document.getElementById("closeModalTipoMovimientoUpdate");
+        var openModalBtns = document.querySelectorAll(".tipoMovimientosUpdate"); // Selecciona todos los botones "Actualizar"
+        var inputId = document.getElementById("IdtipoMovimiento");
+        var closeModalBtnActualizar = document.getElementById("closeModalBtnTipoMovimientoUpdate");
+
+        var inputtipoMovimientos = document.getElementById("tipoMovimientos");
+        
+
+        openModalBtns.forEach(function (btn) {
+            btn.onclick = function () {
+                var categoriaId = btn.getAttribute("data-id");
+                var CategoriatipoMovimientos = btn.getAttribute("data-tipoMovimientos");
+                
+                if (inputId) {
+                    inputId.value = categoriaId;
+                }
+                if (inputtipoMovimientos) inputtipoMovimientos.value = CategoriatipoMovimientos;
+                
+                modal.style.display = "block"; // Muestra el modal
+            };
+        });
+
+        if (closeModalBtnActualizar) {
+            closeModalBtnActualizar.addEventListener("click", function (event) {
+                event.preventDefault();
+                modal.style.display = "none";
+            });
+        }
+        closeModalBtn.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    });
+</script>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        var modal = document.getElementById("TipoMovimientoModal");
+
+        var closeModalBtn = document.getElementById("closeModalTipoMovimiento");
+
+        var closeModalBtnProduct = document.getElementById("closeModalBtnTipoMovimiento");
+
+        var openModalBtn = document.getElementById("openModalBtn");
+
+
+
+        if (openModalBtn) {
+
+            openModalBtn.onclick = function () {
+
+                modal.style.display = "block";
+
+            };
+
+        }
+
+
+
+        if (closeModalBtn) {
+
+            closeModalBtn.addEventListener("click", function () {
+
+                modal.style.display = "none";
+
+            });
+
+        }
+
+
+
+        if (closeModalBtnProduct) {
+
+            closeModalBtnProduct.addEventListener("click", function (event) {
+
+                event.preventDefault(); // Evita cualquier comportamiento inesperado del botón
+
+                modal.style.display = "none";
+
+            });
+
+        }
+
+        window.onclick = function (event) {
+
+            if (event.target === modal) {
+
+                modal.style.display = "none";
+
+            }
+
+        };
+
+    });
+
+
+
+</script>

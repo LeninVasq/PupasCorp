@@ -1,0 +1,28 @@
+﻿@using PupasCorp.Models.ViewModels
+@model TipoMovimiento
+
+<!--Modal-->
+<!-- Modal de Producto -->
+<div id="TipoMovimientoModalUpdate" class="modal">
+    <div class="modal-content">
+        <span id="closeModalTipoMovimientoUpdate" class="close">&times;</span>
+
+        <form enctype="multipart/form-data" asp-action="Update">
+
+
+
+            <div class="form-group">
+                <label for="nombre">Tipo de movimiento</label>
+                <input type="text" asp-for="TipoMovimientos" id="tipoMovimientos" name="TipoMovimientos" placeholder="Nombre del producto" class="form-control">
+            </div>
+            <input type="hidden" asp-for="IdTipoMovimientos" id="IdtipoMovimiento" name="IdTipoMovimientos" placeholder="Nombre del producto" class="form-control">
+
+
+            <div class="form-actions">
+                <button type="button" id="closeModalBtnTipoMovimientoUpdate" class="btns btns-secondary">Cerrar</button>
+                <button type="submit" class="btns btns-primary">Guardar cambios</button>
+            </div>
+        </form>
+
+    </div>
+</div>
