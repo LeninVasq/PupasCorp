@@ -1,250 +1,123 @@
-﻿<style>
-
-    .table-wrapper {
-
-        height: 100vh;
-
-        margin-left: 500px;
-
-    }
-
-
-
-    .table-container {
-
-        background: white;
-
-        width: 100%;
-
-        max-width: 600px;
-
-        padding: 20px;
-
-        border-radius: 12px;
-
-        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-
-        align-items: center;
-
-        align-content: center;
-
-    }
-
-
-
-    table {
-
-        width: 100%;
-
-        border-collapse: collapse;
-
-        border-radius: 10px;
-
-        overflow: hidden;
-
-    }
-
-
-
-    th, td {
-
-        padding: 12px 15px;
-
-        text-align: center;
-
-        border-bottom: 2px solid #dee2e6;
-
-    }
-
-
-
-    th {
-
-        background: #007BFF;
-
-        color: white;
-
-    }
-
-
-
-    td {
-
-        background: #f9f9f9;
-
-        color: #333;
-
-    }
-
-
-
-    tr:last-child td {
-
-        border-bottom: none;
-
-    }
-
-
-
-    tr:nth-child(even) td {
-
-        background: #e9ecef;
-
-    }
-
-
-
-    tr:hover td {
-
-        background: #d6e4ff;
-
-        transition: 0.3s ease-in-out;
-
-    }
-
-</style>
-
-    @model List<UnidadMedidum>
+﻿    @model List<UnidadMedidum>
 
     @using PupasCorp.Models.ViewModels
 
 @await Html.PartialAsync("CreateMedida", new Medida())
 
 @await Html.PartialAsync("Cambiar_Estado", new Medida())
+<style>
+    .table-wrapper {
+        height: 100vh;
+        margin-left: 500px;
+    }
 
+    .table-container {
+        background: white;
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        align-items: center;
+        align-content: center;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    th, td {
+        padding: 12px 15px;
+        text-align: center;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    th {
+        background: #007BFF;
+        color: white;
+    }
+
+    td {
+        background: #f9f9f9;
+        color: #333;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    tr:nth-child(even) td {
+        background: #e9ecef;
+    }
+
+    tr:hover td {
+        background: #d6e4ff;
+        transition: 0.3s ease-in-out;
+    }
+
+    /* Clases para el estado */
+    .estado-activo {
+        color: green;
+        font-weight: bold;
+    }
+
+    .estado-inactivo {
+        color: red;
+        font-weight: bold;
+    }
+</style>
 
 <div class="containerCategoriasIngredientes">
-
-
-
     <div class="ContainerBtnTitle">
-
         <h1 class="page-title">Medidas de productos</h1>
-
-
-
         <button id="openModalBtn" class="btn-add">
-
             <span class="btn-icon">+</span>
-
             <span class="btn-text">Agregar</span>
-
         </button>
-
     </div>
-
     <table>
-
         <thead>
-
             <tr>
-
                 <th>ID</th>
-
                 <th>Nombre</th>
-
                 <th>Estado</th>
-
                 <th>Acciones</th>
-
             </tr>
-
         </thead>
-
         <tbody>
-
             @if (Model != null && Model.Any())
-
             {
-
                 @foreach (var medida in Model)
-
                 {
-
                     <tr>
-
                         <th scope="row">@Html.DisplayFor(m => medida.IdUnidadMedida)</th>
-
                         <td>@Html.DisplayFor(m => medida.Nombre)</td>
-
-                        @if (medida.Estado == true)
-
-                        {
-
-                            <td>Activo</td>
-
-                        }
-
-                        else
-
-                        {
-
-                            <td>Inactivo</td>
-
-
-
-                        }
-
-
-
+                        <td class="@(medida.Estado ? "estado-activo" : "estado-inactivo")">
+                            @(medida.Estado ? "Activo" : "Inactivo")
+                        </td>
                         <td>
-
-                           
-
-
-
-
-
-                            
-                                <button class="btn btn-secondary UnidadUpdate"
-                                        data-id="@medida.IdUnidadMedida"
+                            <button class="btn btn-secondary UnidadUpdate"
+                                    data-id="@medida.IdUnidadMedida"
                                     data-nombre="@medida.Nombre"
                                     data-estado="@medida.Estado">
-                                    Actualizar
-                                </button>
-                               
-                            
-
-
-
-                   
-
-
-
+                                Actualizar
+                            </button>
                         </td>
-
                     </tr>
-
                 }
-
-
-
             }
-
             else
-
             {
-
                 <tr>
-
-                    <td colspan="4" style="text-align: center;">No hay medidas </td>
-
+                    <td colspan="4" style="text-align: center;">No hay medidas</td>
                 </tr>
-
-
-
             }
-
-
-
-
-
         </tbody>
-
     </table>
-
 </div>
-
 @if (TempData["Update"] != null)
 
 {
