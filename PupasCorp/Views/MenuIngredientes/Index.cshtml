@@ -1,0 +1,213 @@
+﻿@model List<MenuIngrediente>
+@using PupasCorp.Models.ViewModels
+
+@await Html.PartialAsync("Create", new MenuIngre())
+
+<style>
+    .containerCategoriasIngredientes {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .ContainerBtnTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .btn-add {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+        .btn-add:hover {
+            background-color: #0056b3;
+        }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+        .table th, .table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #f8f9fa;
+        }
+
+    .table-row:hover {
+        background-color: #f1f1f1;
+        transition: background 0.3s ease;
+    }
+
+    .product-image {
+        max-width: 50px;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .status {
+        font-weight: bold;
+    }
+
+    .active .status {
+        color: green;
+    }
+
+    .inactive .status {
+        color: red;
+        animation: blink 1s infinite alternate;
+    }
+
+    {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+
+    }
+
+    .btn {
+        padding: 8px 12px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: transform 0.2s ease;
+    }
+
+    .btn-secondary {
+        background: #ffc107;
+        color: black;
+    }
+
+        .btn-secondary:hover {
+            transform: scale(1.1);
+        }
+
+    .empty-message {
+        text-align: center;
+        font-style: italic;
+        padding: 20px;
+    }
+</style>
+
+<div class="containerCategoriasIngredientes">
+    <div class="ContainerBtnTitle">
+        <h1 class="page-title">Lista de ingredientes a utilizar para preparar el menu</h1>
+        <button id="openModalMenuIngre" class="btn-add">
+            <span class="btn-icon">+</span>
+            <span class="btn-text">Agregar</span>
+        </button>
+    </div>
+    <table class="table product-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Ingrediente</th>
+                <th>Foto</th>
+
+                <th>Cantidad</th>
+                
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var ingredientes in Model)
+                {
+                    <tr class="table-row">
+                        <td>@Html.DisplayFor(m => ingredientes.IdMenuIngredi)</td>
+
+                        <td>@Html.DisplayFor(m => ingredientes.IdIngredienteNavigation.Nombre)</td>
+                        <td>
+                            <img src="@Html.DisplayFor(m => ingredientes.IdIngredienteNavigation.Foto)" alt="Imagen" class="product-image" />
+                            
+                        </td>
+                        <td>@Html.DisplayFor(m => ingredientes.Cantidad)</td>
+                        <td>
+                            <button class="btn btn-secondary openModalBtnActuCate"
+                                    data-id="@ingredientes.IdIngrediente">
+                                Actualizar
+                            </button>
+                            
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="8" class="empty-message">No hay ingredientes en esta categoría</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+
+@if (TempData["Update"] != null)
+{
+    <script>
+        var mensaje = "@Html.Raw(TempData["Update"])";
+        alert(mensaje);
+    </script>
+}
+
+
+
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("MenuIngreModal");
+        var closeModalBtn = document.getElementById("closeModalMenuIngre");
+        var closeModalBtnProduct = document.getElementById("closeModalBtnMenuIngre");
+        var openModalBtn = document.getElementById("openModalMenuIngre");
+
+        if (openModalBtn) {
+            openModalBtn.onclick = function () {
+                modal.style.display = "block";
+            };
+        }
+
+         if (closeModalBtn) {
+        closeModalBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+    }
+
+        if (closeModalBtnProduct) {
+        closeModalBtnProduct.addEventListener("click", function (event) {
+            event.preventDefault(); // Evita cualquier comportamiento inesperado del botón
+            modal.style.display = "none";
+        });
+    }
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    });
+
+</script>
