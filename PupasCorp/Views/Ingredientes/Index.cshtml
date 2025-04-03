@@ -145,7 +145,7 @@
                         <td>@Html.DisplayFor(m => ingredientes.Nombre)</td>
                         <td>@Html.DisplayFor(m => ingredientes.Descripcion)</td>
                         <td>@Html.DisplayFor(m => ingredientes.Stock)</td>
-                        <td>@Html.DisplayFor(m => ingredientes.Nombre)</td>
+                        <td>@Html.DisplayFor(m => ingredientes.IdUnidadMedidaNavigation.Nombre)</td>
                         <td class="status">@((ingredientes.Estado) ? "Activo" : "Inactivo")</td>
                         <td>
                             <button class="btn btn-secondary openModalBtnActuCate"

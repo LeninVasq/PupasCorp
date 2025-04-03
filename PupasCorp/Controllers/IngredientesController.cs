@@ -26,6 +26,7 @@ namespace PupasCorp.Controllers
 
             var ingredientes = _context.Ingredientes
                                         .Include(t => t.IdCategoriasIngredientesNavigation)
+                                        .Include(t => t.IdUnidadMedidaNavigation)
                                         .Where(i => i.IdCategoriasIngredientes == id) // Filtramos por 'id'
                                         .ToList();
             return View(ingredientes);
