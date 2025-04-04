@@ -24,13 +24,14 @@
         }
 
         body {
+            background-color: #F3E9DC;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
         }
 
         /* Navbar styles */
         .navbar {
-            background-color: white;
+            background-color: #8B5E3B;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             padding: 0.5rem 1rem;
             position: sticky;
@@ -50,7 +51,7 @@
         .navbar-brand {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #333;
+            color: #3E2C24;
             text-decoration: none;
         }
 
@@ -62,7 +63,7 @@
         }
 
         .nav-item a {
-            color: #4b5563;
+            color: white;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s ease;
@@ -70,11 +71,11 @@
         }
 
             .nav-item a:hover {
-                color: #2563eb;
+                color: #C27D7D;
             }
 
         .nav-item.active a {
-            color: #2563eb;
+            color: #C27D7D;
             font-weight: 600;
         }
 
@@ -122,7 +123,7 @@
 
                 .dropdown-content a:hover {
                     background-color: #f3f4f6;
-                    color: #2563eb;
+                    color: #E0C9C9;
                 }
 
             .dropdown-content .logout-item {
@@ -219,36 +220,25 @@
 </head>
 <body>
     <header>
-       <nav class="navbar">
-        <div class="container">
-            <a  class="navbar-brand">PupasCorp</a>
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand" style="color: white;">PupasCorp</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                    ☰
+                </button>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
-                ☰
-            </button>
-
-            <ul class="navbar-menu" id="navbarMenu">
-                <li class="nav-item active">
-                    <a href="/">Home</a>
-                </li>
-
-                <li class="nav-item profile-dropdown">
-                    <div >Categorias ingredientes</div>
-                    <div class="dropdown-content">
-                        <a asp-controller="CategoriasIngredientes" asp-action="Index">Ingredientes</a>
-                        <a href="/settings">Configuración</a>
-                        <a href="/help">Ayuda</a>
-                        <a asp-area="" asp-controller="Autentificacion" asp-action="logout" class="logout-item">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'%3E%3C/path%3E%3Cpolyline points='16 17 21 12 16 7'%3E%3C/polyline%3E%3Cline x1='21' y1='12' x2='9' y2='12'%3E%3C/line%3E%3C/svg%3E"
-                                 alt="Logout" class="logout-icon">
-                            Cerrar Sesión
-                        </a>
-
-                    </div>
-                </li>
+                <ul class="navbar-menu" id="navbarMenu">
+                    <li class="nav-item active">
+                        <a href="/">Home</a>
+                    </li>
 
                     <li class="nav-item">
-                        
+
+                        <a asp-controller="CategoriasIngredientes" asp-action="Index">Categroias Ingredientes</a>
+                    </li>
+
+                    <li class="nav-item">
+
                         <a asp-controller="Medidas" asp-action="Index">Medidas</a>
                     </li>
                     <li class="nav-item">
@@ -259,26 +249,31 @@
 
                         <a asp-controller="Menu" asp-action="Index">Menus</a>
                     </li>
-                <li class="nav-item">
-                    <a href="/login">Login</a>
-                </li>
-                <li class="nav-item profile-dropdown">
-                    <div class="profile-icon">V</div>
-                    <div class="dropdown-content">
-                        <a href="/profile">Mi Perfil</a>
-                        <a href="/settings">Configuración</a>
-                        <a href="/help">Ayuda</a>
-                        <a asp-area="" asp-controller="Autentificacion" asp-action="logout" class="logout-item">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'%3E%3C/path%3E%3Cpolyline points='16 17 21 12 16 7'%3E%3C/polyline%3E%3Cline x1='21' y1='12' x2='9' y2='12'%3E%3C/line%3E%3C/svg%3E"
-                                 alt="Logout" class="logout-icon">
-                            Cerrar Sesión
-                        </a>
 
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                    <li class="nav-item">
+
+                        <a asp-controller="Platillo" asp-action="Index">Platillos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/login">Login</a>
+                    </li>
+                    <li class="nav-item profile-dropdown">
+                        <div class="profile-icon">V</div>
+                        <div class="dropdown-content">
+                            <a href="/profile">Mi Perfil</a>
+                            <a href="/settings">Configuración</a>
+                            <a href="/help">Ayuda</a>
+                            <a asp-area="" asp-controller="Autentificacion" asp-action="logout" class="logout-item">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'%3E%3C/path%3E%3Cpolyline points='16 17 21 12 16 7'%3E%3C/polyline%3E%3Cline x1='21' y1='12' x2='9' y2='12'%3E%3C/line%3E%3C/svg%3E"
+                                     alt="Logout" class="logout-icon">
+                                Cerrar Sesión
+                            </a>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <div class="Contenedor">
         <main role="main" class="pb-3">
@@ -295,7 +290,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-<script>
+    <script>
         // Mobile menu toggle
         const menuToggle = document.getElementById('menuToggle');
         const navbarMenu = document.getElementById('navbarMenu');
@@ -304,7 +299,7 @@
             navbarMenu.classList.toggle('active');
         });
 
-        
+
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -339,4 +334,3 @@
     </script>
 </body>
 </html>
-

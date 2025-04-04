@@ -15,6 +15,8 @@ public partial class Platillo
 
     public bool Mostrar { get; set; }
 
+    public string? Comentario { get; set; }
+
     public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
 
     public virtual ICollection<PedidosItem> PedidosItems { get; set; } = new List<PedidosItem>();

@@ -167,3 +167,20 @@
     color: #64748b;
     font-size: 1.125rem;
 }
+
+
+
+:root {
+    --color-primario: #D17A22; /* Marrón suave tipo madera */
+}
+
+button, .btn, .btn-primary {
+    background-color: var(--color-primario) !important;
+    border-color: var(--color-primario) !important;
+    color: white !important; /* Asegura contraste */
+}
+
+    button:hover, .btn:hover, .btn-primary:hover {
+        background-color: #B66A1F !important; /* Un tono más oscuro al pasar el mouse */
+    }
+

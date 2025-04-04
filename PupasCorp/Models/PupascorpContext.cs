@@ -15,7 +15,6 @@ public partial class PupascorpContext : DbContext
         : base(options)
     {
     }
-
     //lo agrege yo para que funcione el procedimiento de logins por que si no no lo encuentra
     public DbSet<Login> Login { get; set; }
     public DbSet<Tokens> Tokens { get; set; }
@@ -366,6 +365,7 @@ public partial class PupascorpContext : DbContext
             entity.HasKey(e => e.IdPlatillo).HasName("PK__Platillo__F5F96BC3A305C686");
 
             entity.Property(e => e.IdPlatillo).HasColumnName("Id_platillo");
+            entity.Property(e => e.Comentario).HasColumnType("text");
             entity.Property(e => e.Foto).HasColumnType("text");
             entity.Property(e => e.IdUsuario).HasColumnName("Id_usuario");
             entity.Property(e => e.Mostrar).HasDefaultValue(true);
