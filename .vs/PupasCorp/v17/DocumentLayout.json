@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\controllers\\platillocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\controllers\\platillocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\controllers\\menuingredientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\controllers\\menuingredientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\controllers\\categoriasingredientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\controllers\\categoriasingredientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\views\\platillo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\views\\platillo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -13,6 +25,38 @@
     {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\views\\platillo\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\views\\platillo\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\views\\categoriasingredientes\\productmodal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\views\\categoriasingredientes\\productmodal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\models\\viewmodels\\platilloi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\models\\viewmodels\\platilloi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\controllers\\autentificacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\controllers\\autentificacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\models\\viewmodels\\categoriaingre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\models\\viewmodels\\categoriaingre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\views\\ingredientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\views\\ingredientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\views\\ingredientes\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\views\\ingredientes\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\views\\menuingredientes\\actualizar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\views\\menuingredientes\\actualizar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\views\\categoriasingredientes\\actualizar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -35,10 +79,6 @@
       "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\views\\medidas\\createmedida.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\controllers\\platillocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\controllers\\platillocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\wwwroot\\css\\cardscategoriasingredientes.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\wwwroot\\css\\cardscategoriasingredientes.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -51,40 +91,16 @@
       "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\views\\menu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\controllers\\menuingredientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\controllers\\menuingredientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\models\\viewmodels\\platilloi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\models\\viewmodels\\platilloi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\controllers\\autentificacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\controllers\\autentificacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\models\\platillo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\models\\platillo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\controllers\\categoriasingredientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\controllers\\categoriasingredientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\models\\pupascorpcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\models\\pupascorpcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\views\\menuingredientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\views\\menuingredientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\views\\menuingredientes\\actualizar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\views\\menuingredientes\\actualizar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\views\\menu\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -121,10 +137,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\controllers\\ingredientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\controllers\\ingredientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\views\\ingredientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\views\\ingredientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -167,10 +179,6 @@
       "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\views\\categoriasingredientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\views\\categoriasingredientes\\productmodal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\views\\categoriasingredientes\\productmodal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\controllers\\movimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\controllers\\movimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -185,10 +193,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\controllers\\medidascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\controllers\\medidascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\views\\ingredientes\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\views\\ingredientes\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -225,10 +229,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\models\\categoriasingrediente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\models\\categoriasingrediente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\models\\viewmodels\\categoriaingre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|solutionrelative:pupascorp\\models\\viewmodels\\categoriaingre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{420B4739-1C44-433A-BD76-92D886D9FDDE}|PupasCorp\\PupasCorp.csproj|c:\\users\\lenin\\source\\repos\\pupascorp\\pupascorp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -341,7 +341,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -353,26 +353,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Update.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Platillo\\Update.cshtml",
-              "RelativeDocumentMoniker": "PupasCorp\\Views\\Platillo\\Update.cshtml",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Platillo\\Update.cshtml",
-              "RelativeToolTip": "PupasCorp\\Views\\Platillo\\Update.cshtml",
-              "ViewState": "AgIAADQAAAAAAAAAAAAYwI0AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-04T04:07:41.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Platillo\\Create.cshtml",
               "RelativeDocumentMoniker": "PupasCorp\\Views\\Platillo\\Create.cshtml",
               "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Platillo\\Create.cshtml",
               "RelativeToolTip": "PupasCorp\\Views\\Platillo\\Create.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAuwKEAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-04T03:30:56.704Z",
               "EditorCaption": ""
@@ -380,214 +367,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Platillo\\Index.cshtml",
-              "RelativeDocumentMoniker": "PupasCorp\\Views\\Platillo\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Platillo\\Index.cshtml*",
-              "RelativeToolTip": "PupasCorp\\Views\\Platillo\\Index.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-04T03:08:00.454Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Medidas\\Index.cshtml",
-              "RelativeDocumentMoniker": "PupasCorp\\Views\\Medidas\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Medidas\\Index.cshtml",
-              "RelativeToolTip": "PupasCorp\\Views\\Medidas\\Index.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T02:34:18.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\TipoMovimiento\\Index.cshtml",
-              "RelativeDocumentMoniker": "PupasCorp\\Views\\TipoMovimiento\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\TipoMovimiento\\Index.cshtml",
-              "RelativeToolTip": "PupasCorp\\Views\\TipoMovimiento\\Index.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T03:31:12.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Update.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Menu\\Update.cshtml",
-              "RelativeDocumentMoniker": "PupasCorp\\Views\\Menu\\Update.cshtml",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Menu\\Update.cshtml",
-              "RelativeToolTip": "PupasCorp\\Views\\Menu\\Update.cshtml",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAAE8AAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T06:48:30.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Actualizar.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\CategoriasIngredientes\\Actualizar.cshtml",
-              "RelativeDocumentMoniker": "PupasCorp\\Views\\CategoriasIngredientes\\Actualizar.cshtml",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\CategoriasIngredientes\\Actualizar.cshtml",
-              "RelativeToolTip": "PupasCorp\\Views\\CategoriasIngredientes\\Actualizar.cshtml",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAwwLsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T20:46:51.942Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CreateMedida.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Medidas\\CreateMedida.cshtml",
-              "RelativeDocumentMoniker": "PupasCorp\\Views\\Medidas\\CreateMedida.cshtml",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Medidas\\CreateMedida.cshtml",
-              "RelativeToolTip": "PupasCorp\\Views\\Medidas\\CreateMedida.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T05:29:19.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "PlatilloController.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\PlatilloController.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Controllers\\PlatilloController.cs",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\PlatilloController.cs",
-              "RelativeToolTip": "PupasCorp\\Controllers\\PlatilloController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAvAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\PlatilloController.cs*",
+              "RelativeToolTip": "PupasCorp\\Controllers\\PlatilloController.cs*",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-04T03:06:13.42Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CardsCategoriasIngredientes.css",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\wwwroot\\css\\CardsCategoriasIngredientes.css",
-              "RelativeDocumentMoniker": "PupasCorp\\wwwroot\\css\\CardsCategoriasIngredientes.css",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\wwwroot\\css\\CardsCategoriasIngredientes.css",
-              "RelativeToolTip": "PupasCorp\\wwwroot\\css\\CardsCategoriasIngredientes.css",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKQAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-21T20:48:55.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "PupasCorp\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "PupasCorp\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Platillo\\Update.cshtml",
+              "RelativeDocumentMoniker": "PupasCorp\\Views\\Platillo\\Update.cshtml",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Platillo\\Update.cshtml",
+              "RelativeToolTip": "PupasCorp\\Views\\Platillo\\Update.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAwwEEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-16T21:48:29.62Z",
+              "WhenOpened": "2025-04-04T04:07:41.618Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Menu\\Index.cshtml",
-              "RelativeDocumentMoniker": "PupasCorp\\Views\\Menu\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Menu\\Index.cshtml",
-              "RelativeToolTip": "PupasCorp\\Views\\Menu\\Index.cshtml",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAIoAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Platillo\\Index.cshtml",
+              "RelativeDocumentMoniker": "PupasCorp\\Views\\Platillo\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Platillo\\Index.cshtml*",
+              "RelativeToolTip": "PupasCorp\\Views\\Platillo\\Index.cshtml*",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAC8AAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T06:26:27.465Z",
+              "WhenOpened": "2025-04-04T03:08:00.454Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
               "Title": "MenuIngredientesController.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\MenuIngredientesController.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Controllers\\MenuIngredientesController.cs",
               "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\MenuIngredientesController.cs",
               "RelativeToolTip": "PupasCorp\\Controllers\\MenuIngredientesController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAAAFcAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwCsAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T07:10:04.325Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PlatilloI.cs",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\ViewModels\\PlatilloI.cs",
-              "RelativeDocumentMoniker": "PupasCorp\\Models\\ViewModels\\PlatilloI.cs",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\ViewModels\\PlatilloI.cs",
-              "RelativeToolTip": "PupasCorp\\Models\\ViewModels\\PlatilloI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T03:28:59.422Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AutentificacionController.cs",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\AutentificacionController.cs",
-              "RelativeDocumentMoniker": "PupasCorp\\Controllers\\AutentificacionController.cs",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\AutentificacionController.cs",
-              "RelativeToolTip": "PupasCorp\\Controllers\\AutentificacionController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAwwFEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T20:48:40.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Platillo.cs",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\Platillo.cs",
-              "RelativeDocumentMoniker": "PupasCorp\\Models\\Platillo.cs",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\Platillo.cs",
-              "RelativeToolTip": "PupasCorp\\Models\\Platillo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T03:29:03.921Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 2,
               "Title": "CategoriasIngredientesController.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\CategoriasIngredientesController.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Controllers\\CategoriasIngredientesController.cs",
               "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\CategoriasIngredientesController.cs",
               "RelativeToolTip": "PupasCorp\\Controllers\\CategoriasIngredientesController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAowFYAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-21T20:33:25.549Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "PupascorpContext.cs",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\PupascorpContext.cs",
-              "RelativeDocumentMoniker": "PupasCorp\\Models\\PupascorpContext.cs",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\PupascorpContext.cs",
-              "RelativeToolTip": "PupasCorp\\Models\\PupascorpContext.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAIwEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T04:07:06.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 6,
               "Title": "MenuController.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\MenuController.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Controllers\\MenuController.cs",
@@ -600,7 +444,228 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductModal.cshtml",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\CategoriasIngredientes\\ProductModal.cshtml",
+              "RelativeDocumentMoniker": "PupasCorp\\Views\\CategoriasIngredientes\\ProductModal.cshtml",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\CategoriasIngredientes\\ProductModal.cshtml",
+              "RelativeToolTip": "PupasCorp\\Views\\CategoriasIngredientes\\ProductModal.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T19:52:16.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlatilloI.cs",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\ViewModels\\PlatilloI.cs",
+              "RelativeDocumentMoniker": "PupasCorp\\Models\\ViewModels\\PlatilloI.cs",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\ViewModels\\PlatilloI.cs",
+              "RelativeToolTip": "PupasCorp\\Models\\ViewModels\\PlatilloI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T03:28:59.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AutentificacionController.cs",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\AutentificacionController.cs",
+              "RelativeDocumentMoniker": "PupasCorp\\Controllers\\AutentificacionController.cs",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\AutentificacionController.cs",
+              "RelativeToolTip": "PupasCorp\\Controllers\\AutentificacionController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T20:48:40.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CategoriaIngre.cs",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\ViewModels\\CategoriaIngre.cs",
+              "RelativeDocumentMoniker": "PupasCorp\\Models\\ViewModels\\CategoriaIngre.cs",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\ViewModels\\CategoriaIngre.cs",
+              "RelativeToolTip": "PupasCorp\\Models\\ViewModels\\CategoriaIngre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T00:12:54.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Ingredientes\\Index.cshtml",
+              "RelativeDocumentMoniker": "PupasCorp\\Views\\Ingredientes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Ingredientes\\Index.cshtml",
+              "RelativeToolTip": "PupasCorp\\Views\\Ingredientes\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAB4BAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-01T03:19:52.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Ingredientes\\Update.cshtml",
+              "RelativeDocumentMoniker": "PupasCorp\\Views\\Ingredientes\\Update.cshtml",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Ingredientes\\Update.cshtml",
+              "RelativeToolTip": "PupasCorp\\Views\\Ingredientes\\Update.cshtml",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAswMMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T04:25:14.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Actualizar.cshtml",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\MenuIngredientes\\Actualizar.cshtml",
+              "RelativeDocumentMoniker": "PupasCorp\\Views\\MenuIngredientes\\Actualizar.cshtml",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\MenuIngredientes\\Actualizar.cshtml",
+              "RelativeToolTip": "PupasCorp\\Views\\MenuIngredientes\\Actualizar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T03:34:57.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Actualizar.cshtml",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\CategoriasIngredientes\\Actualizar.cshtml",
+              "RelativeDocumentMoniker": "PupasCorp\\Views\\CategoriasIngredientes\\Actualizar.cshtml",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\CategoriasIngredientes\\Actualizar.cshtml",
+              "RelativeToolTip": "PupasCorp\\Views\\CategoriasIngredientes\\Actualizar.cshtml",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAwwLsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T20:46:51.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Menu\\Update.cshtml",
+              "RelativeDocumentMoniker": "PupasCorp\\Views\\Menu\\Update.cshtml",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Menu\\Update.cshtml",
+              "RelativeToolTip": "PupasCorp\\Views\\Menu\\Update.cshtml",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAAE8AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T06:48:30.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\TipoMovimiento\\Index.cshtml",
+              "RelativeDocumentMoniker": "PupasCorp\\Views\\TipoMovimiento\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\TipoMovimiento\\Index.cshtml",
+              "RelativeToolTip": "PupasCorp\\Views\\TipoMovimiento\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T03:31:12.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Medidas\\Index.cshtml",
+              "RelativeDocumentMoniker": "PupasCorp\\Views\\Medidas\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Medidas\\Index.cshtml",
+              "RelativeToolTip": "PupasCorp\\Views\\Medidas\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-01T02:34:18.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CreateMedida.cshtml",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Medidas\\CreateMedida.cshtml",
+              "RelativeDocumentMoniker": "PupasCorp\\Views\\Medidas\\CreateMedida.cshtml",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Medidas\\CreateMedida.cshtml",
+              "RelativeToolTip": "PupasCorp\\Views\\Medidas\\CreateMedida.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-01T05:29:19.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 19,
+              "Title": "CardsCategoriasIngredientes.css",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\wwwroot\\css\\CardsCategoriasIngredientes.css",
+              "RelativeDocumentMoniker": "PupasCorp\\wwwroot\\css\\CardsCategoriasIngredientes.css",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\wwwroot\\css\\CardsCategoriasIngredientes.css",
+              "RelativeToolTip": "PupasCorp\\wwwroot\\css\\CardsCategoriasIngredientes.css",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-21T20:48:55.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "PupasCorp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "PupasCorp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-16T21:48:29.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Menu\\Index.cshtml",
+              "RelativeDocumentMoniker": "PupasCorp\\Views\\Menu\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Menu\\Index.cshtml",
+              "RelativeToolTip": "PupasCorp\\Views\\Menu\\Index.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAIoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T06:26:27.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Platillo.cs",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\Platillo.cs",
+              "RelativeDocumentMoniker": "PupasCorp\\Models\\Platillo.cs",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\Platillo.cs",
+              "RelativeToolTip": "PupasCorp\\Models\\Platillo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T03:29:03.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PupascorpContext.cs",
+              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\PupascorpContext.cs",
+              "RelativeDocumentMoniker": "PupasCorp\\Models\\PupascorpContext.cs",
+              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\PupascorpContext.cs",
+              "RelativeToolTip": "PupasCorp\\Models\\PupascorpContext.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAIwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T04:07:06.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\MenuIngredientes\\Index.cshtml",
               "RelativeDocumentMoniker": "PupasCorp\\Views\\MenuIngredientes\\Index.cshtml",
@@ -613,7 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Menu\\Create.cshtml",
               "RelativeDocumentMoniker": "PupasCorp\\Views\\Menu\\Create.cshtml",
@@ -626,20 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Actualizar.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\MenuIngredientes\\Actualizar.cshtml",
-              "RelativeDocumentMoniker": "PupasCorp\\Views\\MenuIngredientes\\Actualizar.cshtml",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\MenuIngredientes\\Actualizar.cshtml",
-              "RelativeToolTip": "PupasCorp\\Views\\MenuIngredientes\\Actualizar.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-03T03:34:57.363Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\MenuIngredientes\\Create.cshtml",
               "RelativeDocumentMoniker": "PupasCorp\\Views\\MenuIngredientes\\Create.cshtml",
@@ -652,7 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "Movimientos.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\ViewModels\\Movimientos.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Models\\ViewModels\\Movimientos.cs",
@@ -665,7 +717,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "Menus.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\ViewModels\\Menus.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Models\\ViewModels\\Menus.cs",
@@ -678,7 +730,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\Menu.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Models\\Menu.cs",
@@ -691,7 +743,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "TiposMovimiento.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\TiposMovimiento.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Models\\TiposMovimiento.cs",
@@ -704,7 +756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "Ingredien.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\ViewModels\\Ingredien.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Models\\ViewModels\\Ingredien.cs",
@@ -717,7 +769,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "MenuIngre.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\ViewModels\\MenuIngre.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Models\\ViewModels\\MenuIngre.cs",
@@ -730,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "IngredientesController.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\IngredientesController.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Controllers\\IngredientesController.cs",
@@ -743,20 +795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Ingredientes\\Index.cshtml",
-              "RelativeDocumentMoniker": "PupasCorp\\Views\\Ingredientes\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Ingredientes\\Index.cshtml",
-              "RelativeToolTip": "PupasCorp\\Views\\Ingredientes\\Index.cshtml",
-              "ViewState": "AgIAAAUBAAAAAAAAAAAAAB4BAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T03:19:52.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\appsettings.json",
               "RelativeDocumentMoniker": "PupasCorp\\appsettings.json",
@@ -769,7 +808,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "PupasCorp\\Views\\Home\\Index.cshtml",
@@ -782,7 +821,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "MenuIngrediente.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\MenuIngrediente.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Models\\MenuIngrediente.cs",
@@ -795,7 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "Ingrediente.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\Ingrediente.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Models\\Ingrediente.cs",
@@ -808,7 +847,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\TipoMovimiento\\Create.cshtml",
               "RelativeDocumentMoniker": "PupasCorp\\Views\\TipoMovimiento\\Create.cshtml",
@@ -821,7 +860,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Ingredientes\\Create.cshtml",
               "RelativeDocumentMoniker": "PupasCorp\\Views\\Ingredientes\\Create.cshtml",
@@ -834,7 +873,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Movimiento\\Create.cshtml",
               "RelativeDocumentMoniker": "PupasCorp\\Views\\Movimiento\\Create.cshtml",
@@ -847,7 +886,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Controllers\\UsuarioController.cs",
@@ -860,7 +899,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Controllers\\HomeController.cs",
@@ -873,7 +912,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\CategoriasIngredientes\\Index.cshtml",
               "RelativeDocumentMoniker": "PupasCorp\\Views\\CategoriasIngredientes\\Index.cshtml",
@@ -886,20 +925,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "ProductModal.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\CategoriasIngredientes\\ProductModal.cshtml",
-              "RelativeDocumentMoniker": "PupasCorp\\Views\\CategoriasIngredientes\\ProductModal.cshtml",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\CategoriasIngredientes\\ProductModal.cshtml",
-              "RelativeToolTip": "PupasCorp\\Views\\CategoriasIngredientes\\ProductModal.cshtml",
-              "ViewState": "AgIAABcAAAAAAAAAAAAswDkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T19:52:16.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "MovimientoController.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\MovimientoController.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Controllers\\MovimientoController.cs",
@@ -912,7 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "PupasCorp\\Views\\_ViewImports.cshtml",
@@ -925,7 +951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "Medida.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\ViewModels\\Medida.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Models\\ViewModels\\Medida.cs",
@@ -938,7 +964,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "MedidasController.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\MedidasController.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Controllers\\MedidasController.cs",
@@ -951,20 +977,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Update.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Ingredientes\\Update.cshtml",
-              "RelativeDocumentMoniker": "PupasCorp\\Views\\Ingredientes\\Update.cshtml",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Ingredientes\\Update.cshtml",
-              "RelativeToolTip": "PupasCorp\\Views\\Ingredientes\\Update.cshtml",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAswF8AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T04:25:14.815Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "ValuesController.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\ValuesController.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Controllers\\ValuesController.cs",
@@ -977,7 +990,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "Movimiento.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\Movimiento.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Models\\Movimiento.cs",
@@ -990,7 +1003,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "TipoMovimiento.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\ViewModels\\TipoMovimiento.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Models\\ViewModels\\TipoMovimiento.cs",
@@ -1003,7 +1016,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "TipoMovimientoController.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Controllers\\TipoMovimientoController.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Controllers\\TipoMovimientoController.cs",
@@ -1016,7 +1029,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "Cambiar_Estado.cshtml",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\Medidas\\Cambiar_Estado.cshtml",
               "RelativeDocumentMoniker": "PupasCorp\\Views\\Medidas\\Cambiar_Estado.cshtml",
@@ -1029,7 +1042,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "Update.cshtml",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Views\\TipoMovimiento\\Update.cshtml",
               "RelativeDocumentMoniker": "PupasCorp\\Views\\TipoMovimiento\\Update.cshtml",
@@ -1042,7 +1055,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "Pedido.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\Pedido.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Models\\Pedido.cs",
@@ -1055,7 +1068,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Models\\Usuario.cs",
@@ -1068,7 +1081,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "CategoriasIngrediente.cs",
               "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\CategoriasIngrediente.cs",
               "RelativeDocumentMoniker": "PupasCorp\\Models\\CategoriasIngrediente.cs",
@@ -1077,19 +1090,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T00:10:06.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "CategoriaIngre.cs",
-              "DocumentMoniker": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\ViewModels\\CategoriaIngre.cs",
-              "RelativeDocumentMoniker": "PupasCorp\\Models\\ViewModels\\CategoriaIngre.cs",
-              "ToolTip": "C:\\Users\\lenin\\source\\repos\\PupasCorp\\PupasCorp\\Models\\ViewModels\\CategoriaIngre.cs",
-              "RelativeToolTip": "PupasCorp\\Models\\ViewModels\\CategoriaIngre.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T00:12:54.827Z",
               "EditorCaption": ""
             },
             {

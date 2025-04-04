@@ -18,6 +18,34 @@ namespace PupasCorp.Controllers
         public async Task<IActionResult> Index()
         => View(await _context.Platillos.ToListAsync());
 
+        [HttpPost]
+        public async Task<IActionResult> delete(PlatilloI model)
+        {
+            ;
+
+            if (ModelState.IsValid)
+            {
+
+                var platillos = await _context.Platillos.FindAsync(model.IdPlatillo);
+                if (platillos != null)
+                {
+                    TempData["Update"] = "Se ha eliminado";
+                    _context.Platillos.Remove(platillos);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    TempData["Update"] = "no se elimino " + model.IdPlatillo;
+                    return RedirectToAction("Index");
+
+
+                }
+            }
+
+            return RedirectToAction("Index");
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> update(PlatilloI model)
@@ -46,7 +74,7 @@ namespace PupasCorp.Controllers
                     platillo.Nombre = model.Nombre;
                     platillo.Comentario = model.Comentario;
                     platillo.Mostrar = estado;
-                    platillo.IdPlatillo = IdUsuario;
+                    platillo.IdUsuario = IdUsuario;
                     platillo.Foto = model.Foto;
 
                     await _context.SaveChangesAsync();
@@ -84,7 +112,7 @@ namespace PupasCorp.Controllers
             if (ModelState.IsValid)
             {
                 //Base64 B64 = new Base64();
-                if (model.Foto != null && model.Foto.Length > 0)
+                if (model.fotob != null && model.fotob.Length > 0)
                 {
 
                     var IdUsuario = int.Parse(HttpContext.Session.GetString("IdUsuario"));
@@ -98,23 +126,31 @@ namespace PupasCorp.Controllers
                         {
                             estado = false;
                         }
+                    using (var ms = new MemoryStream())
+                    {
 
+                        model.fotob.CopyTo(ms);
+                        byte[] imageBytes = ms.ToArray();
+                        string base64String = Convert.ToBase64String(imageBytes);
                         var platillo = new Platillo()
                         {
                             Nombre = model.Nombre,
                             Comentario = model.Comentario,
                             Mostrar = estado,
                             IdUsuario = IdUsuario,
-                            Foto = model.Foto
+                            Foto = "data:image/png;base64," + base64String,
                         };
                         _context.Add(platillo);
                         await _context.SaveChangesAsync();
                         TempData["Mensaje"] = "Se ha resgistrado exitasamente la categoria";
                         return RedirectToAction("Index");
+                    }
                     
                 }
                 else
                 {
+                    TempData["Mensaje"] = "No se encontro foto";
+
                     return RedirectToAction("Index");
 
                 }

@@ -8,6 +8,10 @@
 
         public string? Foto { get; set; }
 
+        public IFormFile? fotob { get; set; }
+
+
+
         public int IdUsuario { get; set; }
 
         public string Mostrar { get; set; }
