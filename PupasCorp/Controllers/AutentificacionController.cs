@@ -109,18 +109,39 @@ namespace PupasCorp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var usuario = new Usuario()
+
+                var registro = await _context.Set<Registro>()
+                .FromSqlRaw("EXEC Registrar_usuario " +
+                "@Nombre, @Apellido," +
+                " @Correo, @Contrasenia, " +
+                "@Telefono , @Id_tipo_usuario",
+                    new SqlParameter("@Nombre", auth.Nombre),
+                    new SqlParameter("@Apellido", auth.Apellido),
+                    new SqlParameter("@Correo", auth.Correo),
+                    new SqlParameter("@Telefono", auth.Telefono),
+                    new SqlParameter("@Id_tipo_usuario", 2),
+                    new SqlParameter("@Contrasenia", auth.Contrasenia))
+                .ToListAsync();
+
+                if (registro.FirstOrDefault()?.Mensaje == "Registrado exitosamente")
                 {
-                    Nombre = auth.Nombre,
-                    Apellido = auth.Apellido,
-                    Correo = auth.Correo,
-                    Telefono = auth.Telefono,
-                    Contrasenia = auth.Contrasenia,
-                    IdTipoUsuario = 1
-                };
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Login");
+                    return RedirectToAction("Login");
+
+                }
+                else if (registro.FirstOrDefault()?.Mensaje != "Registrado exitosamente")
+                {
+                    TempData["Mensaje"] = string.Join(" | ", registro.FirstOrDefault()?.Mensaje);
+                    return RedirectToAction("Registro");
+
+
+                }
+                else
+                {
+                    TempData["Mensaje"] = "Hubo un error";
+                    return RedirectToAction("Registro");
+
+
+                }
             }
 
             
