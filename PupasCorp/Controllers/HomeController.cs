@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using PupasCorp.Filtros;
 using PupasCorp.Models;
 using System.Diagnostics;
 
@@ -18,6 +19,7 @@ namespace PupasCorp.Controllers
             return View();
         }
 
+        //[AutorizacionUsuario("2")]
         public IActionResult Privacy()
         {
             return View();

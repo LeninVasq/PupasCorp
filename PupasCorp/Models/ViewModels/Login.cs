@@ -3,6 +3,7 @@
     public class Login
     {
         public int IdUsuario { get; set; }
+        public int IdTipoUsuario { get; set; }
 
 
     }

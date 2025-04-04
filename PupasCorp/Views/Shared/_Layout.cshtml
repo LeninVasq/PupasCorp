@@ -217,6 +217,9 @@
 
     </style>
 
+    
+
+
 </head>
 <body>
     <header>
@@ -232,28 +235,29 @@
                         <a href="/">Home</a>
                     </li>
 
-                    <li class="nav-item">
+                    @{
+                        var tipoUsuario = Context.Session.GetString("Id_tipo_usuario");
+                    }
 
-                        <a asp-controller="CategoriasIngredientes" asp-action="Index">Categroias Ingredientes</a>
-                    </li>
+                    @if (tipoUsuario == "2")
+                    {
+                        <li class="nav-item">
+                            <a asp-controller="CategoriasIngredientes" asp-action="Index">Categorías Ingredientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Medidas" asp-action="Index">Medidas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="TipoMovimiento" asp-action="Index">Tipo Movimiento</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Menu" asp-action="Index">Menús</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Platillo" asp-action="Index">Platillos</a>
+                        </li>
+                    }
 
-                    <li class="nav-item">
-
-                        <a asp-controller="Medidas" asp-action="Index">Medidas</a>
-                    </li>
-                    <li class="nav-item">
-
-                        <a asp-controller="TipoMovimiento" asp-action="Index">Tipo Movimiento</a>
-                    </li>
-                    <li class="nav-item">
-
-                        <a asp-controller="Menu" asp-action="Index">Menus</a>
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a asp-controller="Platillo" asp-action="Index">Platillos</a>
-                    </li>
                     <li class="nav-item">
                         <a href="/login">Login</a>
                     </li>

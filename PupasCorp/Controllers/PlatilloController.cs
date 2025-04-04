@@ -19,32 +19,7 @@ namespace PupasCorp.Controllers
         => View(await _context.Platillos.ToListAsync());
 
         [HttpPost]
-        public async Task<IActionResult> delete(PlatilloI model)
-        {
-            ;
-
-            if (ModelState.IsValid)
-            {
-
-                var platillos = await _context.Platillos.FindAsync(model.IdPlatillo);
-                if (platillos != null)
-                {
-                    TempData["Update"] = "Se ha eliminado";
-                    _context.Platillos.Remove(platillos);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction("Index");
-                }
-                else
-                {
-                    TempData["Update"] = "no se elimino " + model.IdPlatillo;
-                    return RedirectToAction("Index");
-
-
-                }
-            }
-
-            return RedirectToAction("Index");
-        }
+        
 
 
         [HttpPost]

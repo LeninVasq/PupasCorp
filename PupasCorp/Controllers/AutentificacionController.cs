@@ -50,9 +50,14 @@ namespace PupasCorp.Controllers
 
                 encriptacion encrip = new encriptacion(); // instancio la clase de encriptacion para poder usar los metodos
                 var Id = resultado.FirstOrDefault()?.IdUsuario;
+                var Id_tipo_usuario = resultado.FirstOrDefault()?.IdTipoUsuario;
                 string encrypted = encrip.Encrypt(fusion);
 
                 HttpContext.Session.SetString("IdUsuario", Id.ToString());
+                HttpContext.Session.SetString("Id_tipo_usuario", Id_tipo_usuario.ToString());
+
+
+
 
 
                 var mensaje = "Creacion de token";
@@ -86,8 +91,9 @@ namespace PupasCorp.Controllers
                         new SqlParameter("@Mensaje", mensaje),
                         new SqlParameter("@Id", Id))
                     .ToListAsync();
+            HttpContext.Session.Clear();
 
-                TempData["Logout"] = token.FirstOrDefault()?.Token;
+            TempData["Logout"] = token.FirstOrDefault()?.Token;
                 return RedirectToAction("Login");
 
         }

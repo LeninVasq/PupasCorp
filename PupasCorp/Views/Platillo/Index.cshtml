@@ -44,10 +44,7 @@
                                 <button type="submit" class="btn btn-primary">Ingredientes</button>
                             </form>
 
-                            <form asp-controller="MenuIngredientes" asp-action="Index" >
-                                <input type="hidden" name="id" value="@platillo.IdPlatillo" />
-                                <button type="submit" class="btn btn-primary">Eliminar</button>
-                            </form>
+
 
                             <button class="btn btn-secondary ModalActualizarPlatillo"
                                     data-id="@platillo.IdPlatillo"

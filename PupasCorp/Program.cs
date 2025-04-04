@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using PupasCorp.Filtros;
 using PupasCorp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,11 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<PupascorpContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("PupasCorp_Context"));
+});
+
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.Add<verificasession>();
 });
 
 builder.Services.AddSession();
