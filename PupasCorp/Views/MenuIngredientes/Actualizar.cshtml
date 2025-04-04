@@ -2,23 +2,28 @@
 @model MenuIngre
 
 
-<div id="MenuIngreModal" class="modal">
+<div id="MenuIngreModalUpdate" class="modal">
     <div class="modal-content">
-        <span id="closeModalMenuIngre" class="close">&times;</span>
+        <span id="closeModalUpdateMenuIngre" class="close">&times;</span>
 
-        <form enctype="multipart/form-data" asp-action="Create">
-            <div class="form-group">
+        <form enctype="multipart/form-data" asp-action="update">
+            <!--            <div class="form-group">
                 <label asp-for="IdIngrediente" class="control-label">Ingrediente</label>
                 <select asp-for="IdIngrediente" class="form-control" asp-items="ViewBag.Ingredientes">
                 </select>
                 <span asp-validation-for="IdIngrediente" class="text-danger"></span>
             </div>
+            -->
+
             <div class="form-group">
                 <label for="nombre">Cantidad</label>
-                <input type="number" asp-for="Cantidad" id="nombre" name="Cantidad" placeholder="Nombre del producto" class="form-control">
+                <input type="number" asp-for="Cantidad" id="CantidadUpdate" name="Cantidad" placeholder="Nombre del producto" class="form-control">
             </div>
+
+            <input type="hidden" asp-for="IdMenuIngredi" id="IdMenuIngrediUpdate" name="IdMenuIngredi" placeholder="Nombre del producto" class="form-control">
+
             <div class="form-actions">
-                <button type="button" id="closeModalBtnMenuIngre" class="btns btns-secondary">Cerrar</button>
+                <button type="button" id="closeModalUpdateBtnMenuIngre" class="btns btns-secondary">Cerrar</button>
                 <button type="submit" class="btns btns-primary">Guardar cambios</button>
             </div>
         </form>

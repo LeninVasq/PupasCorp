@@ -66,13 +66,18 @@
                 </label>
             </div>
 
-            <input type="hidden" asp-for="Foto" id="fotoBase64Menu" name="Foto" />
+            <input type="hidden" asp-for="Foto" id="fotoBase64Menuupdate" name="Foto" />
 
             <input type="hidden" asp-for="IdMenu" id="IdMenu" name="IdMenu" />
 
             <div class="form-group">
                 <label for="nombre">Nombre</label>
                 <input type="text" asp-for="Nombre" id="Nombremenu" name="nombre" placeholder="Nombre del producto" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Precio</label>
+                <input type="number" asp-for="Precio" id="precioupdate" name="Precio" step="0.01" placeholder="Nombre del producto" class="form-control">
             </div>
 
             <div class="form-group">
@@ -136,7 +141,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        let Base64 = document.getElementById("fotoBase64Menu");
+        let Base64 = document.getElementById("fotoBase64Menuupdate");
 
         const intervalo = setInterval(() => {
             if (Base64 && Base64.value.trim()) {
@@ -161,7 +166,7 @@
             reader.onload = function (e) {
                 const base64String = e.target.result;
 
-                let inputBase64 = document.getElementById("fotoBase64Menu");
+                let inputBase64 = document.getElementById("fotoBase64Menuupdate");
                 if (inputBase64) {
                     inputBase64.value = base64String;
                 }

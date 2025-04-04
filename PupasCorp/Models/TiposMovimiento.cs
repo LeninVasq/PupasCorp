@@ -7,7 +7,7 @@ public partial class TiposMovimiento
 {
     public int IdTipoMovimientos { get; set; }
 
-    public string TipoMovimientos { get; set; } 
+    public string TipoMovimientos { get; set; } = null!;
 
     public virtual ICollection<Movimiento> Movimientos { get; set; } = new List<Movimiento>();
 }

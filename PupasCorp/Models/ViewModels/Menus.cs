@@ -11,5 +11,8 @@
         public string? Descripcion { get; set; }
 
         public string? Estado { get; set; }
+
+        public double? Precio { get; set; }
+
     }
 }

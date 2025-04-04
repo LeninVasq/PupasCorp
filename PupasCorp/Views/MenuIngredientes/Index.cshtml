@@ -145,10 +145,16 @@
                         </td>
                         <td>@Html.DisplayFor(m => ingredientes.Cantidad)</td>
                         <td>
-                            <button class="btn btn-secondary openModalBtnActuCate"
-                                    data-id="@ingredientes.IdIngrediente">
+                            <button class="btn btn-secondary openModalBtnUpdateMenuIngre"
+                                    data-idMenuIngre="@ingredientes.IdMenuIngredi"
+                                    data-idIngre="@ingredientes.IdIngrediente"
+                                    data-cantidad="@ingredientes.Cantidad">
                                 Actualizar
                             </button>
+                            <form asp-controller="MenuIngredientes" asp-action="delete">
+                                <input type="hidden"   name="IdMenuIngredi" value="@ingredientes.IdMenuIngredi" />
+                                <button type="submit" class="btn btn-primary">Eliminar</button>
+                            </form>
                         </td>
                     </tr>
                 }
@@ -176,6 +182,52 @@
 
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("MenuIngreModalUpdate");
+        var closeModalBtn = document.getElementById("closeModalUpdateMenuIngre");
+        var openModalBtns = document.querySelectorAll(".openModalBtnUpdateMenuIngre");
+        var closeModalBtnActualizar = document.getElementById("closeModalUpdateBtnMenuIngre");
+
+        var idMenuIngre = document.getElementById("IdMenuIngrediUpdate");
+        //var idIngre = document.getElementById("idIngre");
+        var cantidad = document.getElementById("CantidadUpdate");
+
+        openModalBtns.forEach(function (btn) {
+            btn.onclick = function () {
+                var IdIngrediente = btn.getAttribute("data-idIngre");
+                var Cantidad = btn.getAttribute("data-cantidad");
+                var IdMenuIngredi = btn.getAttribute("data-idMenuIngre");
+
+                
+                if (cantidad) cantidad.value = Cantidad;
+                if (idMenuIngre) idMenuIngre.value = IdMenuIngredi;
+                //if (idIngre) idIngre.value = IdIngrediente;
+
+
+                modal.style.display = "block"; // Muestra el modal
+            };
+        });
+
+        if (closeModalBtnActualizar) {
+            closeModalBtnActualizar.addEventListener("click", function (event) {
+                event.preventDefault();
+                modal.style.display = "none";
+            });
+        }
+        closeModalBtn.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    });
+</script>
+
+
 
 <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -198,7 +250,7 @@
 
         if (closeModalBtnProduct) {
         closeModalBtnProduct.addEventListener("click", function (event) {
-            event.preventDefault(); // Evita cualquier comportamiento inesperado del botón
+            event.preventDefault(); 
             modal.style.display = "none";
         });
     }

@@ -25,7 +25,7 @@
                     <div class="card-header">
                         <div class="card-title-row">
                             <h3 class="card-title">@Html.DisplayFor(m => menu.Nombre)</h3>
-                            <span class="product-count">@Html.DisplayFor(m => menu.IdMenu)</span>
+                            <span class="product-count">$@Html.DisplayFor(m => menu.Precio)</span>
                         </div>
                     </div>
 
@@ -51,6 +51,7 @@
                                     data-nombre="@menu.Nombre"
                                     data-foto="@menu.Foto"
                                     data-descrip="@menu.Descripcion"
+                                    data-precio="@menu.Precio"
                                     data-estado="@menu.Estado">
                                 Actualizar
                             </button>
@@ -84,9 +85,10 @@
         var closeModalBtnActualizar = document.getElementById("closeModalBtnActualizarMenu");
 
         var inputNombre = document.getElementById("Nombremenu");
-        var inputFoto = document.getElementById("fotoBase64Menu");
+        var inputFoto = document.getElementById("fotoBase64Menuupdate");
         var inputDesc = document.getElementById("descripcionmenu");
         var inputEstado = document.getElementById("estadoMenu");
+        var precio = document.getElementById("precioupdate");
 
         openModalBtns.forEach(function (btn) {
             btn.onclick = function () {
@@ -95,6 +97,7 @@
                 var CategoriaFoto = btn.getAttribute("data-foto");
                 var CategoriaDescrip = btn.getAttribute("data-descrip");
                 var CategoriaEstado = btn.getAttribute("data-estado");
+                var precios = btn.getAttribute("data-precio");
                 if (CategoriaEstado == "True") {
                     estado = 1;
                 }
@@ -108,6 +111,8 @@
                 if (inputFoto) inputFoto.value = CategoriaFoto;
                 if (inputFoto) inputDesc.value = CategoriaDescrip;
                 if (inputEstado) inputEstado.value = estado;
+                if (precio) precio.value = precios;
+
 
 
                 modal.style.display = "block"; // Muestra el modal

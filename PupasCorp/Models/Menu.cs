@@ -15,6 +15,8 @@ public partial class Menu
 
     public bool Estado { get; set; }
 
+    public double? Precio { get; set; }
+
     public virtual ICollection<MenuIngrediente> MenuIngredientes { get; set; } = new List<MenuIngrediente>();
 
     public virtual ICollection<PlatilloMenu> PlatilloMenus { get; set; } = new List<PlatilloMenu>();

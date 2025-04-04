@@ -16,13 +16,9 @@ public partial class PupascorpContext : DbContext
     {
     }
 
-
     //lo agrege yo para que funcione el procedimiento de logins por que si no no lo encuentra
     public DbSet<Login> Login { get; set; }
     public DbSet<Tokens> Tokens { get; set; }
-
-
-
 
     public virtual DbSet<CategoriasIngrediente> CategoriasIngredientes { get; set; }
 
@@ -62,18 +58,15 @@ public partial class PupascorpContext : DbContext
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
-   
-
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Name=PupasCorn_Context");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
         //para indicar que no tiene una entidad clave
         modelBuilder.Entity<Login>().HasNoKey();
         modelBuilder.Entity<Tokens>().HasNoKey();
-
-
 
         modelBuilder.Entity<CategoriasIngrediente>(entity =>
         {
@@ -238,6 +231,7 @@ public partial class PupascorpContext : DbContext
             entity.Property(e => e.Nombre)
                 .HasMaxLength(30)
                 .IsUnicode(false);
+            entity.Property(e => e.Precio).HasColumnName("precio");
         });
 
         modelBuilder.Entity<MenuIngrediente>(entity =>

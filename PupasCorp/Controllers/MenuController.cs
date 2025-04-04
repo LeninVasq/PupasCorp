@@ -43,6 +43,7 @@ namespace PupasCorp.Controllers
                     menu.Foto = model.Foto;
                     menu.Descripcion = model.Descripcion;
                     menu.Estado = estado;
+                    menu.Precio = model.Precio;
 
                     await _context.SaveChangesAsync();
                     return RedirectToAction("Index");
@@ -83,7 +84,8 @@ namespace PupasCorp.Controllers
                             Nombre = model.Nombre,
                             Foto = model.Foto,
                             Descripcion = model.Descripcion,
-                            Estado = true
+                            Estado = true,
+                            Precio = model.Precio,
                         };
                         _context.Add(menu);
                         await _context.SaveChangesAsync();
