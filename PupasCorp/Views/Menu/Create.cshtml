@@ -55,17 +55,15 @@
 
         <form enctype="multipart/form-data" asp-action="Create">
             <div class="form-group">
-                <label class="image-upload" for="Fotos">
+                <label class="image-upload" for="product-image">
                     <i class="fas fa-cloud-upload-alt"></i>
-                    <div class="image-upload-text createmenu-preview">
+                    <div class="image-upload-text">
                         <strong>Haga clic para subir</strong> o arrastre una imagen aquí
                     </div>
-                    <input type="file" id="Fotos" class="file-input" accept="image/*"
-                           onchange="Image(event, 'createmenu-preview')">
+                    <input asp-for="Fotob" type="file" id="product-image" class="file-input" accept="image/*" onchange="previewImage(event)">
                 </label>
             </div>
 
-            <input type="hidden" asp-for="Foto" id="fotoBase64Menu" name="Foto" />
 
 
             <div class="form-group">
@@ -97,51 +95,20 @@
 
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let Base64 = document.getElementById("fotoBase64Menu");
-
-        const intervalo = setInterval(() => {
-            if (Base64 && Base64.value.trim()) {
-                mostrarVistaPrevia(Base64.value, 'createmenu-preview');
-                clearInterval(intervalo);
-            }
-        }, 200);
-
-        let lastValue = Base64.value;
-        setInterval(() => {
-            if (Base64.value !== lastValue) {
-                lastValue = Base64.value;
-                mostrarVistaPrevia(Base64.value, 'createmenu-preview');
-            }
-        }, 200);
-    });
-
-    function Image(event, previewClass) {
+    function previewImage(event) {
         const file = event.target.files[0];
         if (file) {
             const reader = new FileReader();
             reader.onload = function (e) {
-                const base64String = e.target.result;
-
-                let inputBase64 = document.getElementById("fotoBase64Menu");
-                if (inputBase64) {
-                    inputBase64.value = base64String;
-                }
-
-                mostrarVistaPrevia(base64String, previewClass);
+                // Limitar la búsqueda de la vista previa solo dentro del modal donde se disparó el evento
+                const modal = event.target.closest('.modal');
+                const uploadText = modal.querySelector('.image-upload-text');
+                uploadText.innerHTML = `
+                                <img src="${e.target.result}" alt="Vista previa"
+                            style="max-width: 50%; max-height: 25%; margin-top: 10px;
+                            border: 1px solid #ccc; padding: 5px;">`;
             };
             reader.readAsDataURL(file);
-        }
-    }
-
-    function mostrarVistaPrevia(base64, previewClass) {
-        const previewContainer = document.querySelector(`.${previewClass}`);
-        if (previewContainer) {
-            previewContainer.innerHTML = base64
-                ? `<img src="${base64}" alt="Vista previa"
-                                style="max-width: 50%; max-height: 25%; margin-top: 10px;
-                                border: 1px solid #ccc; padding: 5px;">`
-                : `<p>No hay imagen seleccionada.</p>`;
         }
     }
 </script>

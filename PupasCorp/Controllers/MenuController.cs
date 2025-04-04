@@ -98,29 +98,28 @@ namespace PupasCorp.Controllers
         {
             if (ModelState.IsValid)
             {
-                //Base64 B64 = new Base64();
-                if (model.Foto != null && model.Foto.Length > 0)
-                {
-                    
-                        var menu = new Menu()
-                        {
-                            Nombre = model.Nombre,
-                            Foto = model.Foto,
-                            Descripcion = model.Descripcion,
-                            Estado = true,
-                            Precio = model.Precio,
-                        };
-                        _context.Add(menu);
-                        await _context.SaveChangesAsync();
-                        TempData["Mensaje"] = "Se ha resgistrado exitasamente la categoria";
-                        return RedirectToAction("Index");
-                    
-                }
-                else
-                {
-                    return RedirectToAction("Index");
 
+                using (var ms = new MemoryStream())
+                {
+
+                    model.Fotob.CopyTo(ms);
+                    byte[] imageBytes = ms.ToArray();
+                    string base64String = Convert.ToBase64String(imageBytes);
+
+                    var menu = new Menu()
+                    {
+                        Nombre = model.Nombre,
+                        Foto = "data:image/png;base64," + base64String,
+                        Descripcion = model.Descripcion,
+                        Estado = true,
+                        Precio = model.Precio,
+                    };
+                    _context.Add(menu);
+                    await _context.SaveChangesAsync();
+                    TempData["Mensaje"] = "Se ha resgistrado exitasamente la categoria";
+                    return RedirectToAction("Index");
                 }
+               
             }
 
 

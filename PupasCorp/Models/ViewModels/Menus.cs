@@ -7,6 +7,7 @@
         public string? Nombre { get; set; }
 
         public string? Foto { get; set; }
+        public IFormFile? Fotob { get; set; }
 
         public string? Descripcion { get; set; }
 
