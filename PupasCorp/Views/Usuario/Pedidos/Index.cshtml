@@ -1,8 +1,5 @@
-﻿@model List<PlatilloMenu>
+﻿@model List<Pedido>
 @using PupasCorp.Models.ViewModels
-@await Html.PartialAsync("Create", new Platillo_Menu())
-@await Html.PartialAsync("Update", new Platillo_Menu())
-
 
 <style>
     .containerCategoriasIngredientes {
@@ -113,7 +110,7 @@
 
 <div class="containerCategoriasIngredientes">
     <div class="ContainerBtnTitle">
-        <h1 class="page-title">Lista de Menus a utilizar para preparar el platillo</h1>
+        <h1 class="page-title">Lista de Pedidos</h1>
         <button id="openModalPlatilloMenu" class="btn-add">
             <span class="btn-icon">+</span>
             <span class="btn-text">Agregar</span>
@@ -134,25 +131,25 @@
         <tbody>
             @if (Model != null && Model.Any())
             {
-                @foreach (var platilloMenu in Model)
+                @foreach (var pedido in Model)
                 {
                     <tr class="table-row">
-                        <td>@Html.DisplayFor(m => platilloMenu.IdPlatilloMenu)</td>
+                        <td>@Html.DisplayFor(m => pedido.IdPedido)</td>
 
-                        <td>@Html.DisplayFor(m => platilloMenu.IdMenuNavigation.Nombre)</td>
+                        <td>@Html.DisplayFor(m => pedido.IdUsuarioNavigation.Nombre)</td>
                         <td>
-                            <img src="@Html.DisplayFor(m => platilloMenu.IdMenuNavigation.Foto)" alt="Imagen" class="product-image" />
+                            <img src="@Html.DisplayFor(m => pedido.IdUsuarioNavigation.Foto)" alt="Imagen" class="product-image" />
                         </td>
-                        <td>@Html.DisplayFor(m => platilloMenu.Cantidad)</td>
+                        <td>@Html.DisplayFor(m => pedido.Observaciones)</td>
                         <td>
                             <button class="btn btn-secondary openModalBtnUpdatePlatilloUpdate"
-                                    data-IdPlatilloMenu="@platilloMenu.IdPlatilloMenu"
-                                    data-idmenu="@platilloMenu.IdMenu"
-                                    data-cantidad="@platilloMenu.Cantidad">
+                                    data-IdPlatilloMenu="@pedido.IdPedido"
+                                    data-idmenu="@pedido.IdPedido"
+                                    data-cantidad="@pedido.IdPedido">
                                 Actualizar
                             </button>
                             <form asp-controller="PlatilloMenu" asp-action="delete">
-                                <input type="hidden" name="IdPlatilloMenu" value="@platilloMenu.IdPlatilloMenu" />
+                                <input type="hidden" name="IdPlatilloMenu" value="@pedido.IdPedido" />
                                 <button type="submit" class="btn btn-primary">Eliminar</button>
                             </form>
                         </td>

@@ -106,8 +106,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aW1pZW50b1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/lenin/source/repos/PupasCorp/PupasCorp/Views/Pedidos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lenin/source/repos/PupasCorp/PupasCorp/Views/PlatilloMenu/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGlsbG9NZW51XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lenin/source/repos/PupasCorp/PupasCorp/Views/PlatilloMenu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGlsbG9NZW51XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lenin/source/repos/PupasCorp/PupasCorp/Views/PlatilloMenu/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGlsbG9NZW51XFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lenin/source/repos/PupasCorp/PupasCorp/Views/Platillo/Create.cshtml]
@@ -148,6 +160,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/lenin/source/repos/PupasCorp/PupasCorp/Views/Usuario/Menus/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xNZW51c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lenin/source/repos/PupasCorp/PupasCorp/Views/Usuario/Pedidos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xQZWRpZG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lenin/source/repos/PupasCorp/PupasCorp/Views/Usuario/Platillo/Index.cshtml]
