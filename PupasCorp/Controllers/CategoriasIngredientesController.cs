@@ -9,7 +9,7 @@ using PupasCorp.Otros;
 
 namespace PupasCorp.Controllers
 {
-    [AutorizacionUsuario("2")]
+    //[AutorizacionUsuario("2")]
     public class CategoriasIngredientesController : Controller
     {
         private readonly PupascorpContext _context;

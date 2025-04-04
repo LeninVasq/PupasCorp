@@ -10,7 +10,7 @@
 
         public decimal? CostoUnitario { get; set; }
 
-        public int? Cantidad { get; set; }
+        public float? Cantidad { get; set; }
 
         public string? Motivo { get; set; }
 

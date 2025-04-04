@@ -8,7 +8,7 @@
 
         public string? Descripcion { get; set; }
 
-        public int? Stock { get; set; }
+        public float? Stock { get; set; }
 
         public IFormFile? Foto { get; set; }
         public string? FotoBase64 { get; set; }

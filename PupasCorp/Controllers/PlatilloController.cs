@@ -15,11 +15,14 @@ namespace PupasCorp.Controllers
 
         }
 
+
+        public async Task<IActionResult> IndexUsuario()
+       => View("~/Views/Usuario/Platillo/Index.cshtml", await _context.Platillos.ToListAsync());
+
         public async Task<IActionResult> Index()
         => View(await _context.Platillos.ToListAsync());
 
-        [HttpPost]
-        
+       
 
 
         [HttpPost]

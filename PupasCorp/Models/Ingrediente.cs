@@ -11,7 +11,7 @@ public partial class Ingrediente
 
     public string? Descripcion { get; set; }
 
-    public int? Stock { get; set; }
+    public double? Stock { get; set; }
 
     public string? Foto { get; set; }
 
