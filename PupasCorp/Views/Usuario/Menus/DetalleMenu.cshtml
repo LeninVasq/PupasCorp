@@ -1,0 +1,93 @@
+﻿@model PupasCorp.Models.Menu
+
+@{
+    ViewBag.Title = "Detalle del Menú";
+}
+
+<style>
+    .detalle-container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        background-color: #fff;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .detalle-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detalle-img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    .detalle-titulo {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .detalle-precio {
+        font-size: 22px;
+        font-weight: 600;
+        color: #28a745;
+        margin-bottom: 20px;
+    }
+
+    .detalle-descripcion {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .detalle-info {
+        font-size: 16px;
+        color: #777;
+        margin-bottom: 10px;
+    }
+
+    .btn-volver {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-volver:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<div class="detalle-container">
+    <div class="detalle-header">
+        <img src="@Model.Foto" alt="@Model.Nombre" class="detalle-img" />
+        <h1 class="detalle-titulo">@Model.Nombre</h1>
+        <div class="detalle-precio">$@Model.Precio</div>
+    </div>
+
+    @* Puedes añadir más campos si existen *@
+    @if (!string.IsNullOrWhiteSpace(Model.Descripcion))
+    {
+        <p class="detalle-descripcion">@Model.Descripcion</p>
+    }
+
+    <p class="detalle-info"><strong>ID:</strong> @Model.IdMenu</p>
+
+    @* Ejemplo adicional: si tienes categoría o ingredientes puedes agregarlo aquí *@
+    @* <p class="detalle-info"><strong>Categoría:</strong> @Model.Categoria.Nombre</p> *@
+    @* <p class="detalle-info"><strong>Ingredientes:</strong> @Model.Ingredientes</p> *@
+
+    <a href="@Url.Action("IndexUsuario", "Menu")" class="btn-volver">← Volver a Menús</a>
+</div>

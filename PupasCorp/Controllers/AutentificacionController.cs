@@ -132,8 +132,6 @@ namespace PupasCorp.Controllers
                 {
                     TempData["Mensaje"] = string.Join(" | ", registro.FirstOrDefault()?.Mensaje);
                     return RedirectToAction("Registro");
-
-
                 }
                 else
                 {

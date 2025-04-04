@@ -239,7 +239,8 @@
                         var tipoUsuario = Context.Session.GetString("Id_tipo_usuario");
                     }
 
-                    @if (tipoUsuario == "2")
+                    <!--Vista de los componentes del admin-->
+                    @if (tipoUsuario == "1")
                     {
                         <li class="nav-item">
                             <a asp-controller="CategoriasIngredientes" asp-action="Index">Categorías Ingredientes</a>
@@ -258,6 +259,13 @@
                         </li>
                     }
 
+                    <!--Vista de los componentes del cliente-->
+                    @if (tipoUsuario == "2")
+                    {
+                        <li class="nav-item">
+                            <a asp-controller="Menu" asp-action="IndexUsuario">Menus</a>
+                        </li>
+                    }
                     <li class="nav-item">
                         <a href="/login">Login</a>
                     </li>

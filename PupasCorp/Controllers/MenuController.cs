@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PupasCorp.Models;
 using PupasCorp.Models.ViewModels;
+using System.Net;
 
 namespace PupasCorp.Controllers
 {
@@ -15,6 +16,28 @@ namespace PupasCorp.Controllers
             _context = context;
 
         }
+
+        public async Task<ActionResult> DetalleMenu(int id)
+        {
+            if (id <= 0)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+            var menu = await _context.Menus.FindAsync(id);
+
+            if (menu == null)
+                return HttpNotFound("No se encontró el menú con ID: " + id);
+
+            return View("~/Views/Usuario/Menus/DetalleMenu.cshtml", menu); 
+        }
+
+        private ActionResult HttpNotFound(string v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<IActionResult> IndexUsuario()
+        => View("~/Views/Usuario/Menus/Index.cshtml", await _context.Menus.ToListAsync());
+
 
         public async Task<IActionResult> Index()
         => View(await _context.Menus.ToListAsync());
